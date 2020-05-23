@@ -1,9 +1,17 @@
 {
-  "name": "gatsby-starter-base",
+  "name": "gatsby-starter-foundation",
   "private": true,
   "description": "A simplified bare-bones starter for Gatsby woth Netlify CMS powered by markdown",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "author": "Stackrole <info@stackrole.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stackrole/gatsby-starter-foundation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stackrole/gatsby-starter-foundation/issues"
+  },
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -48,12 +56,5 @@
     "react-refresh": "^0.8.2",
     "redux": "^3.0.0",
     "typescript": "^3.9.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/stackrole/gatsby-starter-base"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
   }
 }
