@@ -8,7 +8,11 @@ backend:
     uploadMedia: '[skip ci] Upload “{{path}}”'
     deleteMedia: '[skip ci] Delete “{{path}}”'
 
-#publish_mode: editorial_workflow
+# # for local testing 
+# backend:
+#   name: git-gateway
+# local_backend: true
+
 
 media_folder: "static/assets" 
 public_folder: "/assets" 
@@ -26,7 +30,7 @@ collections:
     fields: # The fields each document in this collection have
       - { label: 'Template', name: 'template', widget: 'hidden', default: 'blog-post'}
       - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
-      - { label: 'Slug', name: 'slug', widget: 'string', hint: 'Use only alphanumeric characters, - and _. Avoid spaces in any cases.'}
+      - { label: 'Slug', name: 'slug', widget: 'string', hint: 'Start slug with /. Use only alphanumeric characters, - and _. Avoid spaces in any cases.'}
       - {
           label: 'Publish Date',
           name: 'date',
@@ -45,3 +49,26 @@ collections:
         }
 
       - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Main content goes here.' }
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Home"
+        name: "home"
+        file: "src/content/pages/index.md"
+        fields:
+        - {label: "Template", name: "template", widget: "hidden", default: "index-page" }
+        - {label: "Slug", name: "slug", widget: "hidden", default: "/" }
+        - {label: "Title", name: "title", widget: "string"}
+        - {label: "Tagline", name: "tagline", widget: "string"}
+        - {label: "Featured Image", name: "featuredImage", widget: "image"}
+        - {label: "Body", name: "body", widget: "markdown"}
+        - label: "CTA"
+          name: "cta"
+          widget: "object"
+          fields: 
+            - name: "ctaText"
+              label: "CTA text"
+              widget: "string"
+            - name: "ctaLink"
+              label: "CTA Link"
+              widget: "string"
