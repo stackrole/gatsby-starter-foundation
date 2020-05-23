@@ -3,11 +3,21 @@
 	--font-family-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
   --font-size-small: 12px;
   
-  --header-bg: #111;
+  --primary-color: #5C2941;
+  --header-bg: #5C2941;
+
+  --home-link-hover-color:  var(--primary-color);
+
+  --button-color: #E5C3D3;
+  --button-alternate-color: #5C2941;
+
+  --post-link-color: #0F070B;
+
+
   --nav-link-hover-bg: #111;
   --text-color-meta: rgba(0,0,0,0.5);
   
   // CSS Grid Utility
-  --grid-gap: 2rem; 
+  --grid-gap: 30px; 
 
 }

@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import BackgroundImage from 'gatsby-background-image'
+import Img from "gatsby-image"
 
 import Layout from "../components/layout"
 import SEO from '../components/seo';
@@ -28,9 +28,10 @@ const Post = ({ data, pageContext }) => {
             <time>{frontmatter.date}</time>
           </section>
           {Image ? (
-            <BackgroundImage
-              className="featured-container"
-              fluid={Image}
+            <Img 
+              fluid={Image} 
+              alt={frontmatter.title + ' - Featured image'}
+              className="featured-image"
             />
           ) : ""}
         </header>
@@ -87,10 +88,8 @@ export const pageQuery = graphql`
         description
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 1980, maxHeight: 600, quality: 80) {
+            fluid(maxWidth: 1980, maxHeight: 768, quality: 80, srcSetBreakpoints: [350, 700, 1050, 1400]) {
               ...GatsbyImageSharpFluid
-              ...GatsbyImageSharpFluidLimitPresentationSize
-              src
             }
             sizes {
               src

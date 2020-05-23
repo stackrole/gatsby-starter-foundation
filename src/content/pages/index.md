@@ -1,6 +1,11 @@
 ---
 template: index-page
-title: Not this home
 slug: /
+title: Wyatt Morris
+tagline: Graphic Designer
+featuredImage: /assets/toa-heftiba-0rlfirsdvzu-unsplash.jpg
+cta:
+  ctaText: Learn more
+  ctaLink: /about
 ---
-Hero hu main Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non voluptatem aliquid laborum exercitationem blanditiis sint similique eaque voluptatibus placeat in aliquam nihil eius saepe beatae maxime, ab reprehenderit ex ducimus!
+He is a award winning gaming graphic designer, based in sunny side of California. Working as Principal designer at Bethesda

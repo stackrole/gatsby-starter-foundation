@@ -13,7 +13,7 @@ var netlifyCmsPaths = {
 module.exports = {
   siteMetadata: {
     title: "Foundation",
-    titleTemplate: "%s — Stackrole",
+    titleTemplate: "%s",
     description:
       "A Gatsby starter with Netlify CMS",
     siteUrl: "https://stackrole-base.netlify.app", // No trailing slash allowed!

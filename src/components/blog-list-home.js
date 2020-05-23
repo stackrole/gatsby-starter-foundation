@@ -4,12 +4,12 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import PostCard from "./post-card"
 
 const PostMaker = ({ data }) => (
-  <section>
-    <div className="post-grids">
+  <section className="home-posts">
+    <h2>Latest in <strong>Blog</strong></h2>
+    <div className="grids col-1 sm-2 lg-3">
       {data}
     </div>
-    <hr/>
-    <Link to="/blog/">View more &rarr;</Link>
+    <Link className="button" to="/blog/">See more &raquo;</Link>
   </section>
 )
 
@@ -21,7 +21,7 @@ export default function BlogListHome() {
           allMarkdownRemark(
             sort: { order: DESC, fields: [frontmatter___date] }
             filter: { frontmatter: { template: { eq: "blog-post" } } }
-            limit: 3
+            limit: 6
           ) {
             edges {
               node {

@@ -1,0 +1,13 @@
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  &.-left {
+    padding-right: 10px;
+  }
+  &.-right {
+    padding-left: 10px;
+  }
+  &.-love {
+    color: red;
+  }
+}

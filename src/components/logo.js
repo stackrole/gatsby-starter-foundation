@@ -1,8 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import "../assets/scss/logo.scss"
-
 const Logo = (props) => (
   <div className="site-logo">
     <Link to="/">{props.title}</Link>

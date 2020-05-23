@@ -2,6 +2,86 @@
 @import "defaults";
 @import "lib/css-grid-utility";
 
+.site-logo {
+  font-weight: bold;
+  a {
+    color: #fff;
+		text-decoration: none;
+		&:hover {
+			color: #fff;
+		}
+  }
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+}
+.home-banner {
+	min-height: 50vh;
+	align-items: center;
+	padding: 100px 0;
+	.title {
+		font-size: 48px;
+		line-height: 48px;
+		margin: 0 0 5px;
+		font-weight: 900;
+	}
+	.tagline {
+		font-size: 24px;
+		margin-top: 0;
+		margin-top: 2px;
+		color: rgba(0,0,0,0.7)
+	}
+	.description {
+		font-size: 20px;
+		line-height: 1.4;
+		margin-bottom: 30px;
+
+	}
+}
+.home-posts {
+	.grids {
+		padding-bottom: 30px;
+	}
+	padding-bottom: 100px;
+}
+.post-card {
+	padding: 16px 16px 12px;
+	border: 1px solid rgba(0,0,0,0.08);
+	background-color:#fff;
+	box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+	border-radius: 12px;
+	transition: box-shadow .3s linear;
+	.featured-image {
+		margin-bottom: 10px;
+		border-radius: 12px 12px 0 0;
+	}
+	.title {
+		font-weight: 600;
+		color: var(--post-link-color);
+	}
+	&:hover {
+		border: 1px solid rgba(0,0,0,0.12);
+		box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+		.title {
+			color: var(--button-alternate-color);
+		}
+	}
+}
+
+.button {
+	display: inline-block;
+	background-color: var( --button-alternate-color);
+	color: var(--button-color);
+	padding: 20px 40px;
+	text-decoration: none;
+	border-radius: 6px;
+	transition: background .3s linear;
+	&:hover {
+		background-color: var(--button-color);
+		color: var(--button-alternate-color);
+	}
+}
+
 article figure {
 	margin: 40px 0;
 	text-align: center;
@@ -24,7 +104,7 @@ article iframe {
 article img {
 	max-width: 100%;
 }
-.wrapper {
+.container {
 	margin: 0 auto;
 	max-width: 1240px;
 	padding: 0 20px;
@@ -36,11 +116,9 @@ article img {
 	line-height: 1.5;
 	font-size: 20px;
 }
-.post-grids {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-gap: 30px;
-}
 
+@import "utility";
+
+// Libraries
 @import "lib/prism-default"
 
