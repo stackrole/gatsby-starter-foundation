@@ -1,0 +1,64 @@
+:root {
+	--font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+	--font-family-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
+	--font-size-small: 12px;
+	--text-color-meta: rgba(0,0,0,0.5);
+}
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: var(--font-family);
+	line-height: 1;
+}
+code {
+	font-family: var(--font-family-mono);
+} 
+main {
+	line-height: 1.3;
+}
+article figure {
+	margin: 40px 0;
+	text-align: center;
+	figcaption {
+			font-size: var(--font-size-small);
+			color: var(--text-color-meta);
+			margin-top: 5px;
+	}
+}
+article blockquote {
+	margin-left: 0;
+	padding: 5px 5px 5px 20px;
+	background-color: #f2f2f2;
+	border-left: 3px solid rgba(0,0,0,0.1);
+}
+article iframe {
+	border: 2px solid black;
+	box-sizing: border-box;
+}
+article img {
+	max-width: 100%;
+}
+.wrapper {
+	margin: 0 auto;
+	max-width: 1240px;
+	padding: 0 20px;
+}
+.blog-post-content {
+	max-width: 70ch;
+	margin:0 auto;
+	padding: 20px;
+	line-height: 1.5;
+	font-size: 20px;
+}
+.post-grids {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 30px;
+}
+
+@import "../scss/prism-default"
+// @import "../scss/prism-monokai" /* Dark mode */
+

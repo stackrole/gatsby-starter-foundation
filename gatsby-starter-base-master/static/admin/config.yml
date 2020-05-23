@@ -1,0 +1,47 @@
+backend:
+  name: github
+  repo: stackrole/gatsby-starter-base
+  commit_messages:
+    create: 'Create {{collection}} “{{slug}}”'
+    update: 'Update {{collection}} “{{slug}}”'
+    delete: 'Delete {{collection}} “{{slug}}”'
+    uploadMedia: '[skip ci] Upload “{{path}}”'
+    deleteMedia: '[skip ci] Delete “{{path}}”'
+
+#publish_mode: editorial_workflow
+
+media_folder: "static/assets" 
+public_folder: "/assets" 
+
+collections:
+  - name: 'posts' # Used in routes, ie.: /admin/collections/:slug/edit
+    label: 'Posts' # Used in the UI
+    label_singular: 'Post' # Used in the UI, ie: "New Post"
+    description: >
+      Create awesome content here.
+    folder: 'src/content/posts'
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    summary: '{{title}} — {{year}}/{{month}}/{{day}}'
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: 'Template', name: 'template', widget: 'hidden', default: 'blog-post'}
+      - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
+      - { label: 'Slug', name: 'slug', widget: 'string', hint: 'Use only alphanumeric characters, - and _. Avoid spaces in any cases.'}
+      - {
+          label: 'Publish Date',
+          name: 'date',
+          widget: 'datetime',
+          dateFormat: 'YYYY-MM-DD',
+          timeFormat: 'HH:mm',
+          format: 'YYYY-MM-DD HH:mm',
+        }
+      - { label: 'SEO Description', name: 'description', widget: 'text' }
+      - {
+          label: 'Featured Image',
+          name: 'featuredImage',
+          widget: 'image',
+          required: false,
+          tagname: ''
+        }
+
+      - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Main content goes here.' }

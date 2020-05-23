@@ -1,0 +1,9 @@
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  background: var(--header-bg);
+  padding: 0 20px;
+  height: 60px;
+}
