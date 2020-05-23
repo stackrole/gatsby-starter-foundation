@@ -1,24 +1,7 @@
-:root {
-	--font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
-	--font-family-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;
-	--font-size-small: 12px;
-	--text-color-meta: rgba(0,0,0,0.5);
-}
-html,
-body {
-	margin: 0;
-	padding: 0;
-}
-body {
-	font-family: var(--font-family);
-	line-height: 1;
-}
-code {
-	font-family: var(--font-family-mono);
-} 
-main {
-	line-height: 1.3;
-}
+@import "theme-variables";
+@import "defaults";
+@import "lib/css-grid-utility";
+
 article figure {
 	margin: 40px 0;
 	text-align: center;
@@ -59,6 +42,5 @@ article img {
 	grid-gap: 30px;
 }
 
-@import "../scss/prism-default"
-// @import "../scss/prism-monokai" /* Dark mode */
+@import "lib/prism-default"
 

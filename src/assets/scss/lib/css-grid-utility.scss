@@ -1,0 +1,47 @@
+/*
+  Author: Stackrole <info@stackrole.com>
+  Github: https://github.com/stackrole/css-grid-utility
+*/
+
+// Chnage these as per your requirement
+$columns: 1, 2, 3;
+
+// these are just placeholders for reference, change the actual values in mixin: grid-gen 
+// $breakpoints: "sm", "md", "lg", "xl";
+// $breakpoint-sizes: 576px, 768px, 992px, 1200px;
+
+// creates CSS grid template columns with $columns
+@mixin mk-columns($breakpoint) {  
+  @each $column in $columns {
+    &.#{$breakpoint}-#{$column} {
+      grid-template-columns: repeat($column, 1fr);
+    }
+  }
+}
+
+// Creates media query CSS grid template columns
+@mixin mq-grids($breakpoint, $breakpoint-size) {
+  @if $breakpoint == col {
+    @include mk-columns($breakpoint);
+  }
+  @else {
+    @media (min-width: $breakpoint-size) {
+      @include mk-columns($breakpoint);
+    }
+  }
+}
+
+@mixin grid-gen {
+  // Add or Remove grid creation
+  @include mq-grids("col", 576px); // this wil create basic grid that is mobile-first, do not remove utill you are sure
+  @include mq-grids("sm", 576px);
+  @include mq-grids("md", 768px);
+  @include mq-grids("lg", 992px);
+  @include mq-grids("xl", 1200px);
+}
+
+.grids {
+  display: grid;
+  grid-gap: var(--grid-gap);
+  @include grid-gen; // creates grids
+}
