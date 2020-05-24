@@ -1,18 +1,13 @@
-# backend:
-#   name: github
-#   repo: stackrole/gatsby-starter-base
-#   commit_messages:
-#     create: 'Create {{collection}} “{{slug}}”'
-#     update: 'Update {{collection}} “{{slug}}”'
-#     delete: 'Delete {{collection}} “{{slug}}”'
-#     uploadMedia: '[skip ci] Upload “{{path}}”'
-#     deleteMedia: '[skip ci] Delete “{{path}}”'
-
-# for local testing 
 backend:
   name: git-gateway
-local_backend: true
+  commit_messages:
+    create: 'Create {{collection}} “{{slug}}”'
+    update: 'Update {{collection}} “{{slug}}”'
+    delete: 'Delete {{collection}} “{{slug}}”'
+    uploadMedia: '[skip ci] Upload “{{path}}”'
+    deleteMedia: '[skip ci] Delete “{{path}}”'
 
+local_backend: true # run npx netlify-cms-proxy-server for local testing
 
 media_folder: "static/assets" 
 public_folder: "/assets" 

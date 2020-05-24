@@ -7,6 +7,9 @@
 // 	grid-template-rows: 60px auto 60px;
 // 	min-height: 100vh;
 // }
+.primary-container main {
+	min-height: calc(100vh - 60px - 81px);
+}
 .site-header {
   display: flex;
   justify-content: space-between;
@@ -269,8 +272,9 @@ article img {
 		color: var( --button-alternate-color);
 	}
 	&.-outline {
-		color: var(--button-color);
+		color: var(--primary-color);
 		box-shadow: 0 0 1px rgba(0,0,0,0.6);
+		background: #fff;
 		&:hover {
 			box-shadow: 0 0 1px rgba(0,0,0,0.8);
 			background: #f2f2f2;
@@ -293,14 +297,15 @@ article img {
 // Page
 .page,
 .blog-page,
-.contact-page {
+.contact-page,
+.thanks-page,
+.not-found-page {
 	padding: 50px 20px;
 	.wrapper {
 		max-width: 768px;
 		margin: 0 auto;
 	}
 }
-
 // Contact page
 .contact-page {
 	.wrapper {
