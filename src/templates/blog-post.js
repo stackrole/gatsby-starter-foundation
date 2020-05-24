@@ -1,11 +1,33 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { RiArrowRightLine, RiArrowLeftLine } from "react-icons/ri"
 
 import Layout from "../components/layout"
 import SEO from '../components/seo';
 
-import "../assets/scss/featured-banner.scss"
+const Pagination = (props) => (
+  <div className="pagination -post">
+    <ul>
+        {(props.previous && props.previous.frontmatter.template === 'blog-post') && (
+          <li>
+              <Link to={props.previous.frontmatter.slug} rel="prev">
+                <p><span className="icon -left"><RiArrowLeftLine/></span> Previous</p>
+                <span className="page-title">{props.previous.frontmatter.title}</span>
+              </Link>
+          </li>
+        )}
+        {(props.next && props.next.frontmatter.template === 'blog-post') && (
+          <li>
+            <Link to={props.next.frontmatter.slug} rel="next">
+              <p>Next <span className="icon -right"><RiArrowRightLine/></span></p>
+              <span className="page-title">{props.next.frontmatter.title}</span>
+            </Link>
+          </li>
+        )}
+    </ul>
+  </div>
+)
 
 const Post = ({ data, pageContext }) => {
   const { markdownRemark } = data // data.markdownRemark holds your post data
@@ -13,8 +35,13 @@ const Post = ({ data, pageContext }) => {
   const Image = frontmatter.featuredImage ? frontmatter.featuredImage.childImageSharp.fluid : ""
   const { previous, next } = pageContext
 
+  let props = {
+    previous,
+    next
+  }
+
   return (
-    <Layout>
+    <Layout className="page">
       <SEO
         title={frontmatter.title}
         description={frontmatter.description ? frontmatter.description : excerpt}
@@ -30,6 +57,8 @@ const Post = ({ data, pageContext }) => {
           {Image ? (
             <Img 
               fluid={Image} 
+              objectFit="cover"
+              objectPosition="50% 50%"
               alt={frontmatter.title + ' - Featured image'}
               className="featured-image"
             />
@@ -41,32 +70,9 @@ const Post = ({ data, pageContext }) => {
           dangerouslySetInnerHTML={{ __html: html }}
         />
       </article>
-      <nav>
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {(previous && previous.frontmatter.template === 'blog-post')&& (
-              <Link to={previous.frontmatter.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {(next && next.frontmatter.template === 'blog-post') && (
-              <Link to={next.frontmatter.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
-      </nav>
+      {(previous || next) && (
+        <Pagination {...props} />
+      )}
     </Layout>
   )
 }
@@ -90,6 +96,7 @@ export const pageQuery = graphql`
           childImageSharp {
             fluid(maxWidth: 1980, maxHeight: 768, quality: 80, srcSetBreakpoints: [350, 700, 1050, 1400]) {
               ...GatsbyImageSharpFluid
+              ...GatsbyImageSharpFluidLimitPresentationSize
             }
             sizes {
               src

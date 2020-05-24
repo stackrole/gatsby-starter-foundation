@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import Img from "gatsby-image"
 
 const PostCard = ({ data }) => (
-  <div className="post-card">
+  <article className="post-card">
     {data.frontmatter.featuredImage ? 
       (
         <Link to={data.frontmatter.slug}>
@@ -17,8 +17,11 @@ const PostCard = ({ data }) => (
         </Link>
       ) : ""
     }
-    <Link className="title" to={data.frontmatter.slug}>{data.frontmatter.title}</Link>
-  </div>
+    <div class="post-content">
+      <h2 className="title"><Link to={data.frontmatter.slug}>{data.frontmatter.title}</Link></h2>
+      <p className="meta"><time>{data.frontmatter.date}</time></p>
+    </div>
+  </article>
 )
 
 export default PostCard

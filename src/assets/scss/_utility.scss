@@ -1,12 +1,12 @@
+.text-align-right {
+  text-align: right;
+}
+
 .icon {
   display: inline-block;
+  line-height: inherit;
   vertical-align: middle;
-  &.-left {
-    padding-right: 10px;
-  }
-  &.-right {
-    padding-left: 10px;
-  }
+  align-items: center;
   &.-love {
     color: red;
   }

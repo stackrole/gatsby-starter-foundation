@@ -1,86 +1,42 @@
-import React from 'react'
-import { navigate } from 'gatsby-link'
+import React from "react"
+import {RiSendPlane2Line} from "react-icons/ri";
 
-import Layout from '../components/layout'
+import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-function encode(data) {
-  return Object.keys(data)
-    .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&')
-}
-
-export default function Contact() {
-  const [state, setState] = React.useState({})
-
-  const handleChange = (e) => {
-    setState({ ...state, [e.target.name]: e.target.value })
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    const form = e.target
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...state,
-      }),
-    })
-      .then(() => navigate(form.getAttribute('action')))
-      .catch((error) => alert(error))
-  }
-
-  return (
-    <Layout>
-      <SEO
-        title="Contact"
-        description="Contact page of A Gatsby starter with Netlify CMS"
-      />
-      <h1>Contact</h1>
-      <form
-        name="contact"
-        method="post"
-        action="/thanks/"
-        data-netlify="true"
-        data-netlify-honeypot="bot-field"
-        data-netlify-recaptcha="true"
-        onSubmit={handleSubmit}
-      >
-        {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+const Contact = () => (
+  <Layout className="contact-page">
+    <SEO 
+      title="Contact"
+      description="Get in touch with Stackrole"
+    />
+    <div className="wrapper">
+      <h1>Get in Touch</h1>
+      <div className="description">
+        <p>Got a burning question regarding <b>JAMstack</b>, Need a new <b>Website</b>, or just want to talk in general. We always welcome a good conversation.</p>
+        <p>Just send us a message using the form below or you can send us a DM on <a href="https://twitter.com/stackrole">twitter</a>.</p>
+      </div>
+      <form className="contact-form" action="/thanks" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
         <input type="hidden" name="form-name" value="contact" />
-        <p hidden>
-          <label>
-            Don’t fill this out: <input name="bot-field" onChange={handleChange} />
-          </label>
+        <p>
+          <label>Name<input type="text" name="name" /></label>   
         </p>
         <p>
-          <label>
-            Your name:
-            <br />
-            <input type="text" name="name" onChange={handleChange} />
-          </label>
+          <label>Email<input type="email" name="email" /></label>
         </p>
         <p>
-          <label>
-            Your email:
-            <br />
-            <input type="email" name="email" onChange={handleChange} />
-          </label>
+          <label>Subject<input type="text" name="subject" /></label>   
         </p>
         <p>
-          <label>
-            Message:
-            <br />
-            <textarea name="message" onChange={handleChange} />
-          </label>
+          <label>Message<textarea name="message"></textarea></label>
         </p>
-        <div data-netlify-recaptcha="true">a</div>
-        <p>
-          <button type="submit">Send</button>
+        <p className="text-align-right">
+          <button className="button" type="submit">Send Message <span className="icon -right"><RiSendPlane2Line/></span></button>
         </p>
       </form>
-    </Layout>
-  )
-}
+    </div>
+
+  </Layout>
+)
+
+export default Contact

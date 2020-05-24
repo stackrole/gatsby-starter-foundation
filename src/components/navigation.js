@@ -2,8 +2,6 @@ import React from "react"
 import { Link } from "gatsby"
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 
-import "../assets/scss/navigation.scss"
-
 const MenuItems = [
   {
     path: "/",
@@ -41,8 +39,8 @@ class Navigation extends React.Component {
   }
 
   render () {
-    const listMenuItems = MenuItems.map(menuItem => 
-      <ListLink to={menuItem.path}>{menuItem.title}</ListLink>
+    const listMenuItems = MenuItems.map((menuItem, index) => 
+      <ListLink key={index} to={menuItem.path}>{menuItem.title}</ListLink>
     )
     return (
       <nav className="site-navigation">

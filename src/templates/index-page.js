@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Img from "gatsby-image"
+import { RiArrowRightSLine } from "react-icons/ri"
 
 import Layout from "../components/layout"
 import BlogListHome from "../components/blog-list-home"
@@ -16,7 +17,7 @@ export const pageQuery = graphql`
         tagline
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 480, maxHeight: 480, quality: 80, srcSetBreakpoints: [960, 1440]) {
+            fluid(maxWidth: 480, maxHeight: 380, quality: 80, srcSetBreakpoints: [960, 1440]) {
               ...GatsbyImageSharpFluid
             }
             sizes {
@@ -45,7 +46,7 @@ const HomePage = ({ data }) => {
           <h1 class="title">{frontmatter.title}</h1>
           <p class="tagline">{frontmatter.tagline}</p>
           <div className="description" dangerouslySetInnerHTML={{__html: html}}/>
-          <Link to={frontmatter.cta.ctaLink} className="button">{frontmatter.cta.ctaText} &raquo;</Link>
+          <Link to={frontmatter.cta.ctaLink} className="button">{frontmatter.cta.ctaText}<span class="icon -right"><RiArrowRightSLine/></span></Link>
         </div>
         <div>
           {Image ? (
