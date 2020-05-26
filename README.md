@@ -38,20 +38,7 @@ Once you are in your Netlify CMS, you can navigate to Posts and Pages. Here you 
 You can select any existing post or page to start editing or add a **New Post**. Have fun :)
 
 ## Customing Site details
-You can find all the website settings in `gatsby-config.js`
-
-```json
-siteMetadata: {
-  title: "Foundation",
-  titleTemplate: "%s",
-  description:
-    "A starter to launch your blazing fast website, Built with Gatsby and Netlify CMS. Made with ❤ by Stackrole",
-  siteUrl: "https://foundation.stackrole.com", // No trailing slash allowed!
-  image: "/assets/stackrole.png", // Path to your image you placed in the 'static' folder
-  twitterUsername: "@stackrole",
-}
-```
-You can edit these as per your requirements.
+You can find all the website settings such website Site title, Website URL, Google anlaytics etc,.. in your Netlify CMS `Admin > Settings > General`
 
 
 ## Adding Custom domain to netlify website

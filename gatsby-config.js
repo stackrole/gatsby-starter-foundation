@@ -3,23 +3,17 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
-var netlifyCmsPaths = {
+const netlifyCmsPaths = {
   resolve: `gatsby-plugin-netlify-cms-paths`,
   options: {
     cmsConfig: `/static/admin/config.yml`,
   },
 }
 
+const settings = require("./src/util/site.json")
+
 module.exports = {
-  siteMetadata: {
-    title: "Foundation",
-    titleTemplate: "%s",
-    description:
-      "A starter to launch your blazing fast personal website and a blog, Built with Gatsby and Netlify CMS. Made with ❤ by Stackrole",
-    siteUrl: "https://foundation.stackrole.com", // No trailing slash allowed!
-    image: "/assets/stackrole.png", // Path to your image you placed in the 'static' folder
-    twitterUsername: "@stackrole",
-  },
+  siteMetadata: settings.meta,
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -75,6 +69,12 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: settings.ga,
+      },
+    },
     `gatsby-plugin-advanced-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
