@@ -15,8 +15,8 @@ module.exports = {
     title: "Foundation",
     titleTemplate: "%s",
     description:
-      "A Gatsby starter with Netlify CMS",
-    siteUrl: "https://stackrole-base.netlify.app", // No trailing slash allowed!
+      "A starter to launch your blazing fast personal website and a blog, Built with Gatsby and Netlify CMS. Made with ❤ by Stackrole",
+    siteUrl: "https://foundation.stackrole.com", // No trailing slash allowed!
     image: "/assets/stackrole.png", // Path to your image you placed in the 'static' folder
     twitterUsername: "@stackrole",
   },
@@ -79,8 +79,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Stackrole`,
-        short_name: `Stackrole`,
+        name: `Foundation`,
+        short_name: `Foundation`,
         start_url: `/`,
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
