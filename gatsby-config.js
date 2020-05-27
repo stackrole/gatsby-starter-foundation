@@ -3,23 +3,17 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
-var netlifyCmsPaths = {
+const netlifyCmsPaths = {
   resolve: `gatsby-plugin-netlify-cms-paths`,
   options: {
     cmsConfig: `/static/admin/config.yml`,
   },
 }
 
+const settings = require("./src/util/site.json")
+
 module.exports = {
-  siteMetadata: {
-    title: "Foundation",
-    titleTemplate: "%s",
-    description:
-      "A Gatsby starter with Netlify CMS",
-    siteUrl: "https://stackrole-base.netlify.app", // No trailing slash allowed!
-    image: "/assets/stackrole.png", // Path to your image you placed in the 'static' folder
-    twitterUsername: "@stackrole",
-  },
+  siteMetadata: settings.meta,
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -75,12 +69,18 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-netlify-cms`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: settings.ga,
+      },
+    },
     `gatsby-plugin-advanced-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Stackrole`,
-        short_name: `Stackrole`,
+        name: `Foundation`,
+        short_name: `Foundation`,
         start_url: `/`,
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,

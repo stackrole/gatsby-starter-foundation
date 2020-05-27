@@ -1,46 +1,75 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby's hello-world starter
-</h1>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/63521b78-612e-4a2f-a409-3fa8009e7f3b/deploy-status)](https://app.netlify.com/sites/frosty-perlman-9da1cb/deploys) &nbsp;<a href="https://twitter.com/intent/follow?screen_name=stackrole">
+  <img src="https://img.shields.io/twitter/follow/stackrole.svg?label=Follow%20@Stackrole" alt="Follow @stackrole" />
+</a>
 
-Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+# Foundation
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+A starter to launch your blazing fast personal website and a blog, Built with [Gatsby][gatsby] and [Netlify CMS][netlifyCMS]. Made with ❤ by [Stackrole][stackrole]
 
-## 🚀 Quick start
+![Gatsby Starter Foundation Screenshot](static/assets/screenshot.png)
 
-1.  **Create a Gatsby site.**
+## Quick Deploy
+Just click on the **Deploy to Netlify** button.
 
-    Use the Gatsby CLI to create a new site, specifying the hello-world starter.
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/stackrole/gatsby-starter-foundation)
 
-    ```shell
-    # create a new Gatsby site using the hello-world starter
-    gatsby new my-hello-world-starter https://github.com/gatsbyjs/gatsby-starter-hello-world
-    ```
+This would fork `gatsby-starter-foundation` to your Github account and start builing your website on [Netlify](https://netlify.com). Once the deployment is done. Your website will be live and website address would look like **site-name.netlify.app**
 
-1.  **Start developing.**
+### Further Instructions
+- [Access to Netlify CMS](#access-to-netlify-cms)
+- [Editing content and Adding posts](#editing-content-and-adding-posts)
+- [Customing Site details](#customing-site-details)
+- [Adding Custom domain to netlify website](#adding-custom-domain-to-netlify-website)
+- [Install Locally](#install-locally)
+- [Folder Structure](#folder-structure)
+- [Learning Gatsby](#learning-gatsby)
+- [Thank you from Stackrole](#thank-you)
 
-    Navigate into your new site’s directory and start it up.
+## Access to Netlify CMS
+- Goto app.netlify.com > select your website from the list
+- Goto identity and Click **Enable Identiy**
+- Click on **Invite Users" and invite yourself. You will recieve an email and you need to accept the invitation to set the password.
+- Now headover to Settings > Identity > Services and **Enable Git Gateway**
+- You can also manage who can register and log in to your CMS. Goto  Settings > Identity > Registration >Registration Preferences. I would prefer to keep it to **Invite Only**, if i am the only one using it.
+- Now, goto to **site-name.netlify.app/admin/**, and login with your credentials.
 
-    ```shell
-    cd my-hello-world-starter/
-    gatsby develop
-    ```
+## Editing content and Adding posts
+Once you are in your Netlify CMS, you can navigate to Posts and Pages. Here you will find a list of existing pages and posts. 
 
-1.  **Open the source code and start editing!**
+You can select any existing post or page to start editing or add a **New Post**. Have fun :)
 
-    Your site is now running at `http://localhost:8000`!
+## Customing Site details
+You can find all the website settings such website Site title, Website URL, Google anlaytics etc,.. in your Netlify CMS `Admin > Settings > General`
 
-    _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
 
-    Open the `my-hello-world-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
+## Adding Custom domain to netlify website
+We have written a short article on [Custom domain with Netlify website](custom-domain)
 
-## 🧐 What's inside?
+## Install Locally
+Use the Gatsby CLI to create a new site, specifying the `gatsby-starter-foundation` starter.
+```bash
+gatsby new gatsby-starter-foundation https://github.com/stackrole/gatsby-starter-foundation
+```
+> You need Node and Gatsby-CLI installed, check out Gatsby [Setup Instructions](https://www.gatsbyjs.org/tutorial/part-zero/)
+
+### Start developing
+Navigate into your new site’s directory and start it up.
+```shell
+cd my-hello-world-starter/
+gatsby develop
+```
+
+**Open the source code and start editing!**
+
+Your site is now running at `http://localhost:8000`!
+
+_Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.org/tutorial/part-five/#introducing-graphiql)._
+
+Open the `gatsby-starter-foundation` directory in your code editor of choice and edit. Save your changes and the browser will update in real time!
+
+You can use Netlify CMS in you local just run `npx netlify-cms-proxy-server` and start run `gatsby develop`
+
+## Folder Structure
 
 A quick look at the top-level files and directories you'll see in a Gatsby project.
 
@@ -52,7 +81,6 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     ├── gatsby-browser.js
     ├── gatsby-config.js
     ├── gatsby-node.js
-    ├── gatsby-ssr.js
     ├── LICENSE
     ├── package-lock.json
     ├── package.json
@@ -72,17 +100,15 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 7.  **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby Node APIs](https://www.gatsbyjs.org/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
 
-8.  **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](https://www.gatsbyjs.org/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+8.  **`LICENSE`**: Gatsby is licensed under the MIT license.
 
-9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
+9. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+10. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+11. **`README.md`**: A text file containing useful reference information about your project.
 
-12. **`README.md`**: A text file containing useful reference information about your project.
-
-## 🎓 Learning Gatsby
+## Learning Gatsby
 
 Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.org/). Here are some places to start:
 
@@ -90,10 +116,17 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
 
-## 💫 Deploy
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-hello-world)
+## Thank you
+We really appreciate you taking time to build your website with our `gatsby-starter-foundation`. 
 
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/import/project?template=https://github.com/gatsbyjs/gatsby-starter-hello-world)
+I would love to get your feedback and contributions. 
 
-<!-- AUTO-GENERATED-CONTENT:END -->
+Feel free to ping [@stackrole](stackrole) for help regarding your JAMstack website, our DM's are open. And do not forget to share you website with me 😊
+
+
+[gatsby]: https://gatsbyjs.org
+[netlifyCMS]: https://www.netlifycms.org
+[stackrole]: https://stackrole.com
+[twitter]: https://twitter.com/stackrole
+[custom-domain]: https://stackrole.com/adding-custom-domain-netlify

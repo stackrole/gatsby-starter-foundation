@@ -75,3 +75,53 @@ collections:
         - {label: "Slug", name: "slug", widget: "hidden", default: "/about" }
         - {label: "Title", name: "title", widget: "string"}
         - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Contact"
+        name: "contact"
+        file: "src/content/pages/contact.md"
+        fields:
+        - {label: "Template", name: "template", widget: "hidden", default: "contact-page" }
+        - {label: "Slug", name: "slug", widget: "hidden", default: "/contact" }
+        - {label: "Title", name: "title", widget: "string"}
+        - {label: "Body", name: "body", widget: "markdown"}
+  - name: settings
+    label: Settings
+    files:
+      - name: general
+        label: General
+        file: "src/util/site.json"
+        fields:
+          - label: meta
+            name: meta
+            widget: object
+            fields:
+              - widget: string
+                name: title
+                label: Site Title
+                required: true
+              - widget: string
+                name: titleTemplate
+                label: Title Template
+                default: "%s"
+                required: true
+              - widget: string
+                name: siteUrl
+                label: Website URL
+                required: true
+              - widget: text
+                name: description
+                label: Description
+                default: ''
+                required: false
+              - widget: image
+                name: image
+                label: image
+                default: '/assets/stackrole.png'
+              - widget: string
+                name: twitterUsername
+                label: Twitter
+                required: false
+                
+          - label: "Google Analytics"
+            name: ga
+            widget: string
+            hint: "Add you tracking ID, for example UA-XXXXXXXXX-X"
