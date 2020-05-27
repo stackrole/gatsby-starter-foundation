@@ -73,9 +73,10 @@
       right: 0;
       top: 100%;
       z-index: 1;
-      background: #222;
+      background: #421E2F;
       width: 100%;
-      max-width: 320px;
+			max-width: 320px;    
+			border-radius: 0 0 0 12px;
       overflow: hidden;
     }
     ul li {
@@ -87,7 +88,7 @@
       padding: 20px;
     }
     a:hover {
-      background-color: var(--nav-link-hover-bg);
+      background-color: #29121D;
     }
   }
 }

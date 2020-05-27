@@ -16,13 +16,14 @@ Just click on the **Deploy to Netlify** button.
 This would fork `gatsby-starter-foundation` to your Github account and start builing your website on [Netlify](https://netlify.com). Once the deployment is done. Your website will be live and website address would look like **site-name.netlify.app**
 
 ### Further Instructions
-- Access to Netlify CMS
-- Editing content and Adding posts
-- Customing Site details
-- Adding Custom domain to netlify website
-- Install Locally
-- Folder Structure
-- Learning Gatsby
+- [Access to Netlify CMS](#access-to-netlify-cms)
+- [Editing content and Adding posts](#editing-content-and-adding-posts)
+- [Customing Site details](#customing-site-details)
+- [Adding Custom domain to netlify website](#adding-custom-domain-to-netlify-website)
+- [Install Locally](#install-locally)
+- [Folder Structure](#folder-structure)
+- [Learning Gatsby](#learning-gatsby)
+- [Thank you from Stackrole](#thank-you)
 
 ## Access to Netlify CMS
 - Goto app.netlify.com > select your website from the list
@@ -42,7 +43,7 @@ You can find all the website settings such website Site title, Website URL, Goog
 
 
 ## Adding Custom domain to netlify website
-We have written a short article on [Custom domain with Netlify website](custom domain)
+We have written a short article on [Custom domain with Netlify website](custom-domain)
 
 ## Install Locally
 Use the Gatsby CLI to create a new site, specifying the `gatsby-starter-foundation` starter.
@@ -128,4 +129,4 @@ Feel free to ping [@stackrole](stackrole) for help regarding your JAMstack websi
 [netlifyCMS]: https://www.netlifycms.org
 [stackrole]: https://stackrole.com
 [twitter]: https://twitter.com/stackrole
-[custom domain]: https://stackrole.com/adding-custom-domain-netlify
+[custom-domain]: https://stackrole.com/adding-custom-domain-netlify
