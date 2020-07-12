@@ -26,6 +26,8 @@ Need help launching your website? My DM's are open on <a href="https://twitter.c
 - Invite collaborators into Netlify CMS, without giving access to your Github account via Git Gateway
 - Gatsby Incremental Builds with Netlify.
 
+[![Check out Stackrole.com - A Jamstack marketplace](static/assets/twitter-header.jpg)](https://stackrole.com)
+
 ## 🚀 Quick Deploy
 Just click on the **Deploy to Netlify** button.
 
