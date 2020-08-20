@@ -1,10 +1,26 @@
-import React from "react"
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
+import React from 'react'
 import { Link , graphql } from "gatsby"
 import { RiArrowRightLine, RiArrowLeftLine } from "react-icons/ri"
 
 import Layout from "../components/layout"
 import PostCard from "../components/post-card"
 import SEO from "../components/seo"
+
+const styles = {
+  pagination: {
+    'a': {
+      color: 'muted',
+      '&.is-active': {
+        color: 'text'
+      },
+      '&:hover': {
+        color: 'text'
+      }
+    }
+  }
+}
 
 export const blogListQuery = graphql`
   query blogListQuery($skip: Int!, $limit: Int!) {
@@ -37,7 +53,10 @@ export const blogListQuery = graphql`
   }
 `
 const Pagination = (props) => (
-  <div className="pagination">
+  <div 
+    className="pagination"
+    sx={styles.pagination}
+  >
     <ul>
       {!props.isFirst && (
         <li>

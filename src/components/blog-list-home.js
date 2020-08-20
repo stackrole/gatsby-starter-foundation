@@ -1,4 +1,5 @@
-import React from "react"
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import { Link, StaticQuery, graphql } from "gatsby"
 import { RiArrowDownLine, RiArrowRightSLine } from "react-icons/ri"
 
@@ -10,7 +11,15 @@ const PostMaker = ({ data }) => (
     <div className="grids col-1 sm-2 lg-3">
       {data}
     </div>
-    <Link className="button" to="/blog">See more<span class="icon -right"><RiArrowRightSLine/></span></Link>
+    <Link 
+      className="button" 
+      to="/blog"
+      sx={{
+        variant: 'links.button'
+      }}
+    >
+      See more<span class="icon -right"><RiArrowRightSLine/></span>
+    </Link>
   </section>
 )
 
