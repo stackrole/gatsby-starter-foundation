@@ -42,7 +42,6 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 11. **`README.md`**: A text file containing useful reference information about your project.
 
 
-## Thank you
+## Credits
 
-I thank [@stackrole](stackrole) for the `gatsby-starter-foundation` and this project is a fork of this.
-[![Check out Stackrole.com - A Jamstack marketplace] (https://stackrole.com)
+I thank [@stackrole](stackrole) for the `gatsby-starter-foundation` and this project is a fork of this. [Check out Stackrole!](https://stackrole.com)
