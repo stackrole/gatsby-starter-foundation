@@ -45,4 +45,4 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 ## Thank you
 
 I thank [@stackrole](stackrole) for the `gatsby-starter-foundation` and this project is a fork of this.
-[![Check out Stackrole.com - A Jamstack marketplace](static/assets/twitter-header.jpg)](https://stackrole.com)
+[![Check out Stackrole.com - A Jamstack marketplace] (https://stackrole.com)
