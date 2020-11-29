@@ -3,6 +3,8 @@ template: contact-page
 slug: /contact
 title: Get in touch
 ---
-Got a burning question regarding **JAMstack**, Need a new **Website**, or just anything in general. We are happy to talk.
 
-Just send us a message using the form below or you can send us a DM on [Twitter](https://twitter.com/stackrole)
+Send me a message here or you can reach me on 
+* [LinkedIn](https://www.linkedin.com/in/sreeramganesan/) 
+* [Twitter](https://twitter.com/sregsn)
+* [Github](https://github.com/sreeram-gsan)

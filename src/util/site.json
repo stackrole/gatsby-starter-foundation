@@ -1,12 +1,13 @@
 {
   "meta": {
-    "title": "Foundation",
+    "title": "Sreeram's Digital Home",
     "titleTemplate": "%s",
-    "description": "A starter to launch your blazing fast personal website and a blog, Built with Gatsby and Netlify CMS. Made with ❤ by Stackrole",
-    "siteUrl": "https://foundation.stackrole.com",
+    "description": "Sreeram's Digital Home",
+    "siteUrl": "https://sreeramganesan.com",
     "image": "/assets/stackrole.png",
     "iconimage": "/assets/stackrole.png",
-    "twitterUsername": "@stackrole"
+    "twitterUsername": "@sregsn"
   },
   "ga": "UA-XXXXXXXXX-X"
 }
+

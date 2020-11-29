@@ -1,11 +1,12 @@
 ---
 template: index-page
 slug: /
-title: Wyatt Morriss
-tagline: Graphic Designer
-featuredImage: /assets/toa-heftiba-0rlfirsdvzu-unsplash.jpg
+title: Sreeram Ganesan
+tagline: Software Engineer
+
+featuredImage: /assets/sreeram.jpg
 cta:
   ctaText: Know more
   ctaLink: /about
 ---
-He is a award winning gaming graphic designer, based in sunny side of California. Working as Principal designer at Bethesda
+I am a Software Engineer at Oracle, interested in architecting and developing cloud-native web applications. In recent days I have developed an inclination towards machine learning and developing software applications that help us make smarter, more data-driven decisions.
