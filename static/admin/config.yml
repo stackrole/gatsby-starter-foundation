@@ -118,6 +118,9 @@ collections:
                 name: image
                 label: image
                 default: '/assets/stackrole.png'
+              - widget: image
+                name: iconimage
+                label: favicon
               - widget: string
                 name: twitterUsername
                 label: Twitter
