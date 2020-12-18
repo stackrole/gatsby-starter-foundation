@@ -1,6 +1,9 @@
+/** @jsx jsx */
+import { jsx } from "theme-ui"
 import React from "react"
 import { Link } from "gatsby"
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
+import Theme from "../components/theme"
 
 const MenuItems = [
   {
@@ -43,13 +46,17 @@ class Navigation extends React.Component {
       <ListLink key={index} to={menuItem.path}>{menuItem.title}</ListLink>
     )
     return (
-      <nav className="site-navigation">
+      <nav className="site-navigation" sx={navStyle.menu}>
         <button onClick={this.handleToggleClick} className={"menu-trigger" + (this.state.showMenu ? " is-active" : "")}>
           <div className="icon-menu-line"><RiMenu3Line/></div>
           <div className="icon-menu-close"><RiCloseLine/></div>
         </button>
         <ul>
           {listMenuItems}
+          <div sx={navStyle.border}></div>
+        <div sx={navStyle.theme}>
+          <Theme/>
+        </div>
         </ul>
       </nav>
     )
@@ -57,3 +64,20 @@ class Navigation extends React.Component {
 }
 
 export default Navigation
+
+const navStyle = {
+  menu:{
+    "ul":{
+      bg: "primary",
+    },
+  },
+  theme:{
+    display:["block", "block", "block", "none"],
+    p:" 25px 20px 20px",
+  },
+  border: {
+    bg:"borderColor",
+    borderTop:"1px solid transparent",
+    display:["block", "block", "block", "none"],
+  }
+}

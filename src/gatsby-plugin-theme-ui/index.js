@@ -6,6 +6,7 @@ export default {
     accent: '#fff',
     muted: 'rgba(0, 0, 0, 0.7)',
     cardBg: '#fff',
+    borderColor:"#540229",
     modes: {
       dark: {
         text: '#f5f5f5',
@@ -14,7 +15,8 @@ export default {
         accent: '#5C2941',
         muted: 'rgba(255, 255, 255, 0.7)',
         buttonAccent: '#fff',
-        cardBg: '#252525'
+        cardBg: '#252525',
+        borderColor:"#888"
       },
     }
   },

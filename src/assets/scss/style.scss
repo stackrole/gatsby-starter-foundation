@@ -15,14 +15,13 @@
   justify-content: space-between;
   align-items: center;
   position: relative;
-  background: var(--header-bg);
   padding: 30px 20px;
 }
 .site-navigation {
   ul {
     list-style: none;
     margin: 0;
-    padding: 0;
+		padding: 0;
   }
   ul li {
     display: inline-block;
@@ -73,7 +72,6 @@
       right: 0;
       top: 100%;
       z-index: 1;
-      background: #421E2F;
       width: 100%;
 			max-width: 320px;    
 			border-radius: 0 0 0 12px;
@@ -86,9 +84,6 @@
     a {
       display: block;
       padding: 20px;
-    }
-    a:hover {
-      background-color: #29121D;
     }
   }
 }

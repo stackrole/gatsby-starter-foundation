@@ -1,4 +1,5 @@
-import React from "react"
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import { graphql } from "gatsby"
 import {RiSendPlane2Line} from "react-icons/ri";
 
@@ -51,7 +52,9 @@ const Contact = ({data}) => {
             <label>Message<textarea name="message" required ></textarea></label>
           </p>
           <p className="text-align-right">
-            <button className="button" type="submit">Send Message <span className="icon -right"><RiSendPlane2Line/></span></button>
+            <button className="button"            sx={{
+              variant: 'links.button'
+            }} type="submit">Send Message <span className="icon -right"><RiSendPlane2Line/></span></button>
           </p>
         </form>
       </div>
