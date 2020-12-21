@@ -10,7 +10,7 @@ A starter to launch your blazing fast personal website and a blog, Built with [G
 
 Need help launching your website? My DM's are open on <a href="https://twitter.com/stackrole">twitter</a>
 
-[![Gatsby Starter Foundation Screenshot](static/assets/screenshot.png)](https://foundation.stackrole.com)
+[![Gatsby Starter Foundation Screenshot](static/assets/gatsby-starter-foundation-light-mode.png)](https://foundation.stackrole.com)
 
 ## 👌 Features
 - A Blog and Personal website with Netlify CMS.
@@ -28,7 +28,7 @@ Need help launching your website? My DM's are open on <a href="https://twitter.c
 - Gatsby Incremental Builds with Netlify.
 
 
-[![Gatsby Starter Foundation Screenshot](static/assets/screenshot2.png)](https://foundation.stackrole.com)
+[![Gatsby Starter Foundation Screenshot](static/assets/gatsby-starter-foundation-dark-mode.png)](https://foundation.stackrole.com)
 
 ## 🚀 Quick Deploy
 Just click on the **Deploy to Netlify** button.
