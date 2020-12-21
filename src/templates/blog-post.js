@@ -1,4 +1,5 @@
-import React from "react"
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import { Link, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { RiArrowRightLine, RiArrowLeftLine } from "react-icons/ri"
@@ -6,13 +7,38 @@ import { RiArrowRightLine, RiArrowLeftLine } from "react-icons/ri"
 import Layout from "../components/layout"
 import SEO from '../components/seo';
 
+const styles = {
+  'article blockquote': {
+    'background-color': 'cardBg'
+  },
+  pagination: {
+    'a': {
+      color: 'muted',
+      '&.is-active': {
+        color: 'text'
+      },
+      '&:hover': {
+        color: 'text'
+      }
+    }
+  }
+}
+
 const Pagination = (props) => (
-  <div className="pagination -post">
+  <div 
+    className="pagination -post"
+    sx={styles.pagination}
+  >
     <ul>
         {(props.previous && props.previous.frontmatter.template === 'blog-post') && (
           <li>
               <Link to={props.previous.frontmatter.slug} rel="prev">
-                <p><span className="icon -left"><RiArrowLeftLine/></span> Previous</p>
+                <p
+                  sx={{
+                    color: 'muted'
+                  }}
+                >
+                  <span className="icon -left"><RiArrowLeftLine/></span> Previous</p>
                 <span className="page-title">{props.previous.frontmatter.title}</span>
               </Link>
           </li>
@@ -20,7 +46,11 @@ const Pagination = (props) => (
         {(props.next && props.next.frontmatter.template === 'blog-post') && (
           <li>
             <Link to={props.next.frontmatter.slug} rel="next">
-              <p>Next <span className="icon -right"><RiArrowRightLine/></span></p>
+              <p
+                sx={{
+                  color: 'muted'
+                }}
+              >Next <span className="icon -right"><RiArrowRightLine/></span></p>
               <span className="page-title">{props.next.frontmatter.title}</span>
             </Link>
           </li>

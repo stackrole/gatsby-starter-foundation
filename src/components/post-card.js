@@ -1,9 +1,15 @@
-import React from "react"
+/** @jsx jsx */
+import { jsx } from 'theme-ui'
 import { Link } from "gatsby"
 import Img from "gatsby-image"
 
 const PostCard = ({ data }) => (
-  <article className="post-card">
+  <article 
+    className="post-card"
+    sx={{
+      bg: 'cardBg'
+    }}
+  >
     {data.frontmatter.featuredImage ? 
       (
         <Link to={data.frontmatter.slug}>
@@ -18,8 +24,24 @@ const PostCard = ({ data }) => (
       ) : ""
     }
     <div class="post-content">
-      <h2 className="title"><Link to={data.frontmatter.slug}>{data.frontmatter.title}</Link></h2>
-      <p className="meta"><time>{data.frontmatter.date}</time></p>
+      <h2 className="title">
+        <Link 
+          to={data.frontmatter.slug}
+          sx={{
+            variant: 'links.postLink'
+          }}
+        >
+          {data.frontmatter.title}
+        </Link>
+      </h2>
+      <p 
+        className="meta"
+        sx={{
+          color: 'muted',
+        }}
+      >
+        <time>{data.frontmatter.date}</time>
+      </p>
     </div>
   </article>
 )
