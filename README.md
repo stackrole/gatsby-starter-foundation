@@ -15,6 +15,7 @@ Need help launching your website? My DM's are open on <a href="https://twitter.c
 ## 👌 Features
 - A Blog and Personal website with Netlify CMS.
 - Responsive Web Design
+- Dark / Light Mode
 - Customize content of Homepage, About and Contact page.
 - Add / Modify / Delete blog posts.
 - Edit website settings, Add Google Analytics and make it your own all with in the CMS.
@@ -25,6 +26,7 @@ Need help launching your website? My DM's are open on <a href="https://twitter.c
 - Netlify Contact Form, Works right out of the box after deployment.
 - Invite collaborators into Netlify CMS, without giving access to your Github account via Git Gateway
 - Gatsby Incremental Builds with Netlify.
+
 
 [![Gatsby Starter Foundation Screenshot](static/assets/screenshot2.png)](https://foundation.stackrole.com)
 

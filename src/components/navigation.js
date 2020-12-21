@@ -31,7 +31,6 @@ class Navigation extends React.Component {
   constructor(props) {
     super(props)
     this.state = {showMenu: false}
-
     this.handleToggleClick = this.handleToggleClick.bind(this);
   }
 
@@ -54,9 +53,7 @@ class Navigation extends React.Component {
         <ul>
           {listMenuItems}
           <div sx={navStyle.border}></div>
-        <div sx={navStyle.theme}>
-          <Theme/>
-        </div>
+          <div sx={navStyle.theme}><Theme/></div>
         </ul>
       </nav>
     )
