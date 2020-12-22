@@ -7,6 +7,9 @@ export default {
     muted: 'rgba(0, 0, 0, 0.7)',
     cardBg: '#fff',
     borderColor:"#540229",
+    labelText: "#777",
+    inputBorder: "#aaa",
+    inputBackground: "#fff",
     modes: {
       dark: {
         text: '#f5f5f5',
@@ -16,7 +19,10 @@ export default {
         muted: 'rgba(255, 255, 255, 0.7)',
         buttonAccent: '#fff',
         cardBg: '#252525',
-        borderColor:"#888"
+        borderColor:"#888",
+        labelText: "#777",
+        inputBorder: "#777",
+        inputBackground: "#333",
       },
     }
   },
