@@ -29,7 +29,7 @@ const Contact = ({data}) => {
   const { frontmatter, html } = markdownRemark
 
   return  (
-    <Layout className="contact-page">
+    <Layout className="contact-page" sx={contactStyles.contactPage}>
       <SEO 
         title={frontmatter.title}
         description={frontmatter.title + " " + site.siteMetadata.title}
@@ -52,7 +52,8 @@ const Contact = ({data}) => {
             <label>Message<textarea name="message" required ></textarea></label>
           </p>
           <p className="text-align-right">
-            <button className="button"            sx={{
+            <button className="button"            
+            sx={{
               variant: 'links.button'
             }} type="submit">Send Message <span className="icon -right"><RiSendPlane2Line/></span></button>
           </p>
@@ -64,3 +65,18 @@ const Contact = ({data}) => {
 }
 
 export default Contact
+
+const contactStyles = {
+  contactPage:{
+    "input":{
+      border:"6px solid",
+      borderColor: "inputBorder",
+      bg: "inputBackground"
+    },
+    "textarea": {
+      border:"6px solid",
+      borderColor: "inputBorder",
+      bg: "inputBackground"
+    }
+  }
+}
