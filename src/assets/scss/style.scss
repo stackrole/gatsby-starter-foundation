@@ -135,6 +135,18 @@
 		}
 	}
 }
+.social-icons {
+	font-size: 35px;
+	display: flex;
+	gap:16px;
+	margin-top: 80px;
+	a {
+		color: #a8959e;
+	}
+	a:hover {
+		color: #5c2941;
+	}
+}
 .home-posts {
 	.grids {
 		padding-bottom: 30px;
