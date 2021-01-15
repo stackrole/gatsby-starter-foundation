@@ -254,13 +254,12 @@ article img {
 
 .blog-post {
 	.featured-image {
-		min-height: 50vh;
 		border-radius: 12px;
 	}
 }
 // Buttons 
 .button {
-	--padding: 20px;
+	--padding: 15px;
 	--margin: 20px;
 	display: inline-flex;
 	align-items: center;
@@ -271,7 +270,7 @@ article img {
 	text-decoration: none;
 	appearance: none;
 	border: none;
-	font-size: inherit;
+	font-size: 16px;
 	line-height: 1;
 	transition: background .3s linear;
 	&:hover {
@@ -355,10 +354,13 @@ article img {
 	padding: 20px 0;
 	p {
 		margin: 0;
-		color: #777
+		color: #fff;
 	}
 	a {
 		font-weight: normal;
+	}
+	a:hover {
+		color: #fff;
 	}
 }
 
@@ -402,6 +404,7 @@ article img {
 		p {
 			font-size: 14px;
 			margin: 0 0 5px;
+			color: #3c3539;
 		}
 		a {
 			font-weight: normal;
@@ -426,7 +429,8 @@ article img {
 				border: 1px solid rgba(0,0,0,0.1);
 				display: block;
 				margin-bottom: 10px;
-				background: #fafafa;
+				border: 1px solid #3c3539;
+				border-radius: 8px;
 			}
 		}
 		.num {
