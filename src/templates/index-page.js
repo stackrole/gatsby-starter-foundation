@@ -69,9 +69,9 @@ const HomePage = ({ data }) => {
       <SEO/>
       <div className="home-banner grids col-1 sm-2">
         <div>
-          <h1 class="title">{frontmatter.title}</h1>
+          <h1 className="title">{frontmatter.title}</h1>
           <p 
-            class="tagline"
+            className="tagline"
             sx={{
               color: 'muted'
             }}
@@ -88,7 +88,7 @@ const HomePage = ({ data }) => {
           >
             {frontmatter.cta.ctaText}<span class="icon -right"><RiArrowRightSLine/></span>
           </Link>
-          <div  className="social-icons">
+          <div  className="social-icons" sx={indexStyles.socialIcons}>
             {sIcons}
           </div>
         </div>
@@ -108,3 +108,14 @@ const HomePage = ({ data }) => {
 }
 
 export default HomePage
+
+const indexStyles = {
+  socialIcons: {
+    "a":{
+      color: "socialIcons",
+      ":hover":{
+        color:"socialIconsHover",
+      }
+    }
+  }
+}

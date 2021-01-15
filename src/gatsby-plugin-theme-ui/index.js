@@ -10,6 +10,8 @@ export default {
     labelText: "#777",
     inputBorder: "#aaa",
     inputBackground: "#fff",
+    socialIcons:"#a8959e",
+    socialIconsHover:"#5c2941",
     modes: {
       dark: {
         text: '#f5f5f5',
@@ -23,6 +25,8 @@ export default {
         labelText: "#777",
         inputBorder: "#777",
         inputBackground: "#333",
+        socialIcons:"rgba(255,255,255,0.7)",
+        socialIconsHover:"#fff",
       },
     }
   },
