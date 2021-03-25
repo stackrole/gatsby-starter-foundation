@@ -3,7 +3,6 @@ import { jsx } from 'theme-ui'
 import React from 'react'
 import { Link , graphql } from "gatsby"
 import { RiArrowRightLine, RiArrowLeftLine } from "react-icons/ri"
-
 import Layout from "../components/layout"
 import PostCard from "../components/post-card"
 import SEO from "../components/seo"
@@ -40,10 +39,11 @@ export const blogListQuery = graphql`
 						title
 						featuredImage {
 							childImageSharp {
-								fluid(maxWidth: 540, maxHeight: 360, quality: 80) {
-                  ...GatsbyImageSharpFluid
-                  ...GatsbyImageSharpFluidLimitPresentationSize
-                }
+                gatsbyImageData(
+                  layout: CONSTRAINED
+                  width: 345
+                  height: 260
+                )
 							}
 						}
           }

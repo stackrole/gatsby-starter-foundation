@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { graphql, Link } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { RiArrowRightSLine } from "react-icons/ri"
 import { RiFacebookBoxFill, RiTwitterFill, RiLinkedinBoxFill, RiYoutubeFill, RiInstagramFill, RiRssFill, RiGithubFill, RiTelegramFill, RiPinterestFill, RiSnapchatFill, RiSkypeFill,RiDribbbleFill, RiMediumFill, RiBehanceFill} from "react-icons/ri";
 import { FaWordpress, FaVk} from "react-icons/fa";
@@ -21,12 +21,11 @@ export const pageQuery = graphql`
         tagline
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 480, maxHeight: 380, quality: 80, srcSetBreakpoints: [960, 1440]) {
-              ...GatsbyImageSharpFluid
-            }
-            sizes {
-              src
-            }
+            gatsbyImageData(
+              layout: CONSTRAINED
+              width: 585
+              height: 439
+            )
           }
         }
         cta {
@@ -35,16 +34,44 @@ export const pageQuery = graphql`
         }
       }
     }
+    posts : allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { template: { eq: "blog-post" } } }
+      limit: 6
+    ) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 250)
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            slug
+            title
+            featuredImage {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: FIXED
+                  width: 345
+                  height: 260
+                )
+              }
+            }
+          }
+        }
+      }
+    }
   }
 `
 
 const HomePage = ({ data }) => {
-  const { markdownRemark } = data // data.markdownRemark holds your post data
+  const { markdownRemark, posts } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
-  const Image = frontmatter.featuredImage ? frontmatter.featuredImage.childImageSharp.fluid : ""
-  const sIcons = Icons.socialIcons.map(icons => {
+  const Image = frontmatter.featuredImage
+  ? frontmatter.featuredImage.childImageSharp.gatsbyImageData
+  : ""
+  const sIcons = Icons.socialIcons.map((icons, index) => {
     return(
-      <div>
+      <div key={"social icons" + index}>
         { icons.icon === "facebook" ? (<Link to={icons.url} target="_blank"><RiFacebookBoxFill/></Link>) :"" }
         { icons.icon === "twitter" ? (<Link to={icons.url} target="_blank"><RiTwitterFill/></Link>) : "" }
         { icons.icon === "linkedin" ? (<Link to={icons.url} target="_blank"><RiLinkedinBoxFill/></Link>) : "" }
@@ -86,7 +113,7 @@ const HomePage = ({ data }) => {
               variant: 'links.button'
             }}
           >
-            {frontmatter.cta.ctaText}<span class="icon -right"><RiArrowRightSLine/></span>
+            {frontmatter.cta.ctaText}<span className="icon -right"><RiArrowRightSLine/></span>
           </Link>
           <div  className="social-icons" sx={indexStyles.socialIcons}>
             {sIcons}
@@ -94,15 +121,15 @@ const HomePage = ({ data }) => {
         </div>
         <div>
           {Image ? (
-            <Img 
-              fluid={Image} 
-              alt={frontmatter.title + ' - Featured image'}
+            <GatsbyImage
+              image={Image}
+              alt={frontmatter.title + " - Featured image"}
               className="featured-image"
             />
           ) : ""}
         </div>
       </div>
-      <BlogListHome/>
+      <BlogListHome data={posts} />
 		</Layout>
 	)
 }

@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { Link, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { RiArrowRightLine, RiArrowLeftLine } from "react-icons/ri"
 
 import Layout from "../components/layout"
@@ -62,7 +62,10 @@ const Pagination = (props) => (
 const Post = ({ data, pageContext }) => {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html, excerpt } = markdownRemark
-  const Image = frontmatter.featuredImage ? frontmatter.featuredImage.childImageSharp.fluid : ""
+
+  const Image = frontmatter.featuredImage
+  ? frontmatter.featuredImage.childImageSharp.gatsbyImageData
+  : ""
   const { previous, next } = pageContext
 
   let props = {
@@ -85,11 +88,9 @@ const Post = ({ data, pageContext }) => {
             <time>{frontmatter.date}</time>
           </section>
           {Image ? (
-            <Img 
-              fluid={Image} 
-              objectFit="cover"
-              objectPosition="50% 50%"
-              alt={frontmatter.title + ' - Featured image'}
+            <GatsbyImage
+              image={Image}
+              alt={frontmatter.title + " - Featured image"}
               className="featured-image"
             />
           ) : ""}
@@ -124,13 +125,7 @@ export const pageQuery = graphql`
         description
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 1980, maxHeight: 968, quality: 80, srcSetBreakpoints: [350, 700, 1050, 1400]) {
-              ...GatsbyImageSharpFluid
-              ...GatsbyImageSharpFluidLimitPresentationSize
-            }
-            sizes {
-              src
-            }
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
       }
