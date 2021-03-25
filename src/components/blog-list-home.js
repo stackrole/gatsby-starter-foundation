@@ -43,10 +43,11 @@ export default function BlogListHome() {
                   title
                   featuredImage {
                     childImageSharp {
-                      fluid(maxWidth: 540, maxHeight: 360, quality: 80) {
-                        ...GatsbyImageSharpFluid
-                        ...GatsbyImageSharpFluidLimitPresentationSize
-                      }
+                      gatsbyImageData(
+                        layout: FULL_WIDTH
+                        breakpoints: [360, 600]
+                        placeholder: BLURRED
+                      )
                     }
                   }
                 }

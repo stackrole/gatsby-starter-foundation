@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx } from 'theme-ui'
 import { graphql, Link } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { RiArrowRightSLine } from "react-icons/ri"
 import { RiFacebookBoxFill, RiTwitterFill, RiLinkedinBoxFill, RiYoutubeFill, RiInstagramFill, RiRssFill, RiGithubFill, RiTelegramFill, RiPinterestFill, RiSnapchatFill, RiSkypeFill,RiDribbbleFill, RiMediumFill, RiBehanceFill} from "react-icons/ri";
 import { FaWordpress, FaVk} from "react-icons/fa";
@@ -21,12 +21,11 @@ export const pageQuery = graphql`
         tagline
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 480, maxHeight: 380, quality: 80, srcSetBreakpoints: [960, 1440]) {
-              ...GatsbyImageSharpFluid
-            }
-            sizes {
-              src
-            }
+            gatsbyImageData(
+              layout: FULL_WIDTH
+              breakpoints: [360, 620, 1240]
+              placeholder: BLURRED
+            )
           }
         }
         cta {
@@ -41,7 +40,9 @@ export const pageQuery = graphql`
 const HomePage = ({ data }) => {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
-  const Image = frontmatter.featuredImage ? frontmatter.featuredImage.childImageSharp.fluid : ""
+  const Image = frontmatter.featuredImage
+  ? frontmatter.featuredImage.childImageSharp.gatsbyImageData
+  : ""
   const sIcons = Icons.socialIcons.map(icons => {
     return(
       <div>
@@ -94,9 +95,9 @@ const HomePage = ({ data }) => {
         </div>
         <div>
           {Image ? (
-            <Img 
-              fluid={Image} 
-              alt={frontmatter.title + ' - Featured image'}
+            <GatsbyImage
+              image={Image}
+              alt={frontmatter.title + " - Featured image"}
               className="featured-image"
             />
           ) : ""}
