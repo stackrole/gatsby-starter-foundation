@@ -88,13 +88,6 @@ const Post = ({ data, pageContext }) => {
             <time>{frontmatter.date}</time>
           </section>
           {Image ? (
-            // <Img 
-            //   fluid={Image} 
-            //   objectFit="cover"
-            //   objectPosition="50% 50%"
-            //   alt={frontmatter.title + ' - Featured image'}
-            //   className="featured-image"
-            // />
             <GatsbyImage
               image={Image}
               alt={frontmatter.title + " - Featured image"}

@@ -39,7 +39,11 @@ export const blogListQuery = graphql`
 						title
 						featuredImage {
 							childImageSharp {
-                gatsbyImageData(layout: FULL_WIDTH)
+                gatsbyImageData(
+                  layout: CONSTRAINED
+                  width: 345
+                  height: 260
+                )
 							}
 						}
           }

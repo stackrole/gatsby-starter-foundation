@@ -22,9 +22,9 @@ export const pageQuery = graphql`
         featuredImage {
           childImageSharp {
             gatsbyImageData(
-              layout: FULL_WIDTH
-              breakpoints: [360, 620, 1240]
-              placeholder: BLURRED
+              layout: CONSTRAINED
+              width: 585
+              height: 439
             )
           }
         }
@@ -34,18 +34,44 @@ export const pageQuery = graphql`
         }
       }
     }
+    posts : allMarkdownRemark(
+      sort: { order: DESC, fields: [frontmatter___date] }
+      filter: { frontmatter: { template: { eq: "blog-post" } } }
+      limit: 6
+    ) {
+      edges {
+        node {
+          id
+          excerpt(pruneLength: 250)
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            slug
+            title
+            featuredImage {
+              childImageSharp {
+                gatsbyImageData(
+                  layout: FIXED
+                  width: 345
+                  height: 260
+                )
+              }
+            }
+          }
+        }
+      }
+    }
   }
 `
 
 const HomePage = ({ data }) => {
-  const { markdownRemark } = data // data.markdownRemark holds your post data
+  const { markdownRemark, posts } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   const Image = frontmatter.featuredImage
   ? frontmatter.featuredImage.childImageSharp.gatsbyImageData
   : ""
-  const sIcons = Icons.socialIcons.map(icons => {
+  const sIcons = Icons.socialIcons.map((icons, index) => {
     return(
-      <div>
+      <div key={"social icons" + index}>
         { icons.icon === "facebook" ? (<Link to={icons.url} target="_blank"><RiFacebookBoxFill/></Link>) :"" }
         { icons.icon === "twitter" ? (<Link to={icons.url} target="_blank"><RiTwitterFill/></Link>) : "" }
         { icons.icon === "linkedin" ? (<Link to={icons.url} target="_blank"><RiLinkedinBoxFill/></Link>) : "" }
@@ -87,7 +113,7 @@ const HomePage = ({ data }) => {
               variant: 'links.button'
             }}
           >
-            {frontmatter.cta.ctaText}<span class="icon -right"><RiArrowRightSLine/></span>
+            {frontmatter.cta.ctaText}<span className="icon -right"><RiArrowRightSLine/></span>
           </Link>
           <div  className="social-icons" sx={indexStyles.socialIcons}>
             {sIcons}
@@ -103,7 +129,7 @@ const HomePage = ({ data }) => {
           ) : ""}
         </div>
       </div>
-      <BlogListHome/>
+      <BlogListHome data={posts} />
 		</Layout>
 	)
 }

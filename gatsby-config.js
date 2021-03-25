@@ -38,7 +38,6 @@ module.exports = {
         gfm: true,
         plugins: [
           netlifyCmsPaths,
-          `gatsby-remark-reading-time`,
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -77,7 +76,7 @@ module.exports = {
         trackingId: settings.ga,
       },
     },
-    `gatsby-plugin-advanced-sitemap`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

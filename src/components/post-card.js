@@ -23,7 +23,7 @@ const PostCard = ({ data }) => (
         </Link>
       ) : ""
     }
-    <div class="post-content">
+    <div className="post-content">
       <h2 className="title">
         <Link 
           to={data.frontmatter.slug}
