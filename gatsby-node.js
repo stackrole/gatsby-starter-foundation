@@ -4,7 +4,6 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
-  //const blogPost = path.resolve(`./src/templates/blog-post.js`)
   const blogList = path.resolve(`./src/templates/blog-list.js`)
 
   const result = await graphql(`
@@ -32,8 +31,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  // Create blog posts
+  // Create markdown pages
   const posts = result.data.allMarkdownRemark.edges
+  let blogPostsCount = 0
 
   posts.forEach((post, index) => {
     const id = post.node.id
@@ -52,11 +52,16 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         next,
       },
     })
+
+    // Count blog posts.
+    if (post.node.frontmatter.template === 'blog-post') {
+      blogPostsCount++
+    }
   })
 
   // Create blog-list pages
   const postsPerPage = 9
-  const numPages = Math.ceil(posts.length / postsPerPage)
+  const numPages = Math.ceil(blogPostsCount / postsPerPage)
 
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({

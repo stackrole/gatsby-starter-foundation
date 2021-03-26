@@ -1,7 +1,7 @@
 // breakpoints
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
-$breakpoint-lg: 992px;
+$breakpoint-lg: 1022px;
 $breakpoint-xl: 1200px;
 
 :root {
@@ -13,7 +13,7 @@ $breakpoint-xl: 1200px;
   --primary-color: #5C2941;
   --header-bg: #5C2941;
 
-  --home-link-color: #A1613F;
+  --home-link-color: #d4d4d4;
   --home-link-hover-color:  var(--primary-color);
 
   --button-color: #E5C3D3;
@@ -25,7 +25,7 @@ $breakpoint-xl: 1200px;
   --nav-link-hover-bg: #111;
   --text-color-meta: rgba(0,0,0,0.5);
 
-  --label-text: rgba(0,0,0,0.5);
+  --label-text: #777;
   --input-focus-border: #83AAAC;
   
   // CSS Grid Utility
