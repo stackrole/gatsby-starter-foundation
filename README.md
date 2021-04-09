@@ -33,7 +33,7 @@ Need help launching your website? My DM's are open on <a href="https://twitter.c
 - Gatsby Incremental Builds with Netlify.
 
 
-[![Gatsby Starter Foundation Screenshot](static/assets/gatsby-starter-foundation-dark-mode.jpg)](https://foundation.stackrole.com)
+[![Gatsby Starter Foundation Screenshot](static/assets/gatsby-starter-foundation-dark-mode.jpg)](https://stackrole.com/demos/foundation)
 
 ## 🚀 Quick Deploy
 Just click on the **Deploy to Netlify** button.
