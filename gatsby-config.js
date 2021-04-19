@@ -48,6 +48,24 @@ module.exports = {
               loading: "lazy",
             },
           },
+          {
+            resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
+            options: {
+              // Fields to index
+              fields: [`title`, `template`, `slug`],
+              // How to resolve each field`s value for a supported node type
+              resolvers: {
+                // For any node of type MarkdownRemark, list how to resolve the fields` values
+                MarkdownRemark: {
+                  template: node => node.frontmatter.template,
+                  title: node => node.frontmatter.title,
+                  slug: node => node.frontmatter.slug,
+                },
+              },
+              // Optional filter to limit indexed nodes
+              filter: (node, getNode) => node.frontmatter.tags !== "exempt",
+            },
+          },
           `gatsby-remark-responsive-iframe`,
           {
             resolve: `gatsby-remark-prismjs`,
