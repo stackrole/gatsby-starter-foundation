@@ -32,7 +32,10 @@ const SEO = ({ title, description, image, article }) => {
       <link rel="alternate" href={seo.url} hreflang="x-default" />
       <meta name="description" content={seo.description} />
       <meta name="image" content={seo.image} />
-
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
       {seo.url && <meta property="og:url" content={seo.url} />}
 
       {(article ? true : null) && <meta property="og:type" content="article" />}

@@ -5,7 +5,7 @@ import { Link, graphql } from "gatsby"
 import { RiArrowRightLine, RiArrowLeftLine } from "react-icons/ri"
 import Layout from "../components/layout"
 import PostCard from "../components/post-card"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const styles = {
   pagination: {
@@ -110,7 +110,7 @@ class BlogIndex extends React.Component {
 
     return (
       <Layout className="blog-page">
-        <SEO
+        <Seo
           title={"Blog — Page " + currentPage + " of " + numPages}
           description={
             "Stackrole base blog page " + currentPage + " of " + numPages

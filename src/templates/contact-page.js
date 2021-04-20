@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 import { RiSendPlane2Line } from "react-icons/ri"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 export const pageQuery = graphql`
   query ContactQuery($id: String!) {
@@ -30,7 +30,7 @@ const Contact = ({ data }) => {
 
   return (
     <Layout className="contact-page" sx={contactStyles.contactPage}>
-      <SEO
+      <Seo
         title={frontmatter.title}
         description={frontmatter.title + " " + site.siteMetadata.title}
       />
