@@ -24,7 +24,7 @@ const PostMaker = ({ data }) => (
       className="button" 
       to="/blog"
       sx={{
-        variant: 'links.button'
+        variant: "variants.button",
       }}
     >
       See more<span className="icon -right"><RiArrowRightSLine/></span>

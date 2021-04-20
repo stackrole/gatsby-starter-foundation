@@ -262,8 +262,6 @@ article img {
 	display: inline-flex;
 	align-items: center;
 	padding: var(--padding) calc(var(--padding) * 2);
-	background-color: var( --button-alternate-color);
-	color: var(--button-color);
 	border-radius: 12px;
 	text-decoration: none;
 	appearance: none;
@@ -271,10 +269,6 @@ article img {
 	font-size: 16px;
 	line-height: 1;
 	transition: background .3s linear;
-	&:hover {
-		background-color: var(--button-color);
-		color: var( --button-alternate-color);
-	}
 	&.-outline {
 		color: var(--primary-color);
 		box-shadow: 0 0 1px rgba(0,0,0,0.6);

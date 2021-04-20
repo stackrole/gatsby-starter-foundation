@@ -150,5 +150,26 @@ collections:
                 label: url
                 required: true
                 hint: "Paste the 'URL' of your Social media" 
-            
-      
+
+  - label: "Appearance"
+    name: "appearance"
+    identifier_field: "name"
+    files:
+      - label: "Default Theme"
+        name: "themescolors"
+        file: "src/util/default-colors.json"
+        fields:
+        - label: "Primary Color"
+          name: "siteColor"
+          widget: "color"
+          enableAlpha: true
+          allowInput: true
+      - label: "Dark Theme"
+        name: "darkthemescolors"
+        file: "src/util/dark-theme-colors.json"
+        fields:
+        - label: "Primary Color"
+          name: "siteColor"
+          widget: "color"
+          enableAlpha: true
+          allowInput: true

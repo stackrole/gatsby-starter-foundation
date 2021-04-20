@@ -110,12 +110,17 @@ const HomePage = ({ data }) => {
             to={frontmatter.cta.ctaLink} 
             className="button"
             sx={{
-              variant: 'links.button'
+              variant: "variants.button",
             }}
           >
             {frontmatter.cta.ctaText}<span className="icon -right"><RiArrowRightSLine/></span>
           </Link>
-          <div  className="social-icons" sx={indexStyles.socialIcons}>
+          <div  
+            className="social-icons" 
+            sx={{
+              variant: "variants.socialIcons",
+            }}
+          >
             {sIcons}
           </div>
         </div>
@@ -135,14 +140,3 @@ const HomePage = ({ data }) => {
 }
 
 export default HomePage
-
-const indexStyles = {
-  socialIcons: {
-    "a":{
-      color: "socialIcons",
-      ":hover":{
-        color:"socialIconsHover",
-      }
-    }
-  }
-}

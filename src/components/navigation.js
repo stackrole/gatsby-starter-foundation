@@ -65,7 +65,7 @@ export default Navigation
 const navStyle = {
   menu:{
     "ul":{
-      bg: "primary",
+      bg: "siteColor",
     },
   },
   theme:{

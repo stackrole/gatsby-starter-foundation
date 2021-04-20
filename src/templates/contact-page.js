@@ -53,8 +53,8 @@ const Contact = ({data}) => {
           </p>
           <p className="text-align-right">
             <button className="button"            
-            sx={{
-              variant: 'links.button'
+             sx={{
+              variant: "variants.button",
             }} type="submit">Send Message <span className="icon -right"><RiSendPlane2Line/></span></button>
           </p>
         </form>
@@ -71,12 +71,14 @@ const contactStyles = {
     "input":{
       border:"6px solid",
       borderColor: "inputBorder",
-      bg: "inputBackground"
+      bg: "inputBackground",
+      outline: "none"
     },
     "textarea": {
       border:"6px solid",
       borderColor: "inputBorder",
-      bg: "inputBackground"
+      bg: "inputBackground",
+      outline: "none"
     }
   }
 }

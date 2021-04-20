@@ -95,7 +95,6 @@ const searchStyle = {
     ".search-container": {
       display: "none",
       position: "absolute",
-      bg: "header.dropdown.bgColor",
       top: ["60px", "80px"],
       borderRadius: "12px",
       width: ["100%", "auto"],
@@ -107,7 +106,7 @@ const searchStyle = {
     },
     ".search-input": {
       bg: "#fff",
-      color: "#000",
+      color: "var(--theme-ui-colors-text)",
       borderRadius: "0",
       boxShadow: "none",
       border: "none",
@@ -118,10 +117,10 @@ const searchStyle = {
       display: "flex",
       justifyContent: "center",
       "&:hover, &:focus": {
-        color:"#bea9b3",
+        color:"rgba(255, 255, 255, 0.8)",
       },
       "&.is-active": {
-        color:"#bea9b3",
+        color:"rgba(255, 255, 255, 0.8)",
         position: "relative",
         zIndex: 1112,
         "+ .search-container": {
@@ -152,6 +151,7 @@ const searchStyle = {
             outline: "none",
             fontSize: "16px",
             p: 3,
+            borderBottom: "1px solid #eee"
           },
           ul: {
             display: "block",
@@ -165,8 +165,11 @@ const searchStyle = {
           },
           "ul > li > a": {
             display: "block",
-            color: "#000",
+            color: "var(--theme-ui-colors-muted)",
             p: 3,
+            "&:hover":{
+              color: "var(--theme-ui-colors-text)",
+            }
           },
         },
       },
