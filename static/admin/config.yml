@@ -2,50 +2,65 @@ backend:
   name: git-gateway
   branch: main
   commit_messages:
-    create: 'Create {{collection}} “{{slug}}”'
-    update: 'Update {{collection}} “{{slug}}”'
-    delete: 'Delete {{collection}} “{{slug}}”'
-    uploadMedia: '[skip ci] Upload “{{path}}”'
-    deleteMedia: '[skip ci] Delete “{{path}}”'
+    create: "Create {{collection}} “{{slug}}”"
+    update: "Update {{collection}} “{{slug}}”"
+    delete: "Delete {{collection}} “{{slug}}”"
+    uploadMedia: "[skip ci] Upload “{{path}}”"
+    deleteMedia: "[skip ci] Delete “{{path}}”"
 
 # Uncomment local_backend when you need to develop in your local
 local_backend: true # run npx netlify-cms-proxy-server for local testing
 
-media_folder: "static/assets" 
-public_folder: "/assets" 
+media_folder: "static/assets"
+public_folder: "/assets"
 
 collections:
-  - name: 'posts' # Used in routes, ie.: /admin/collections/:slug/edit
-    label: 'Posts' # Used in the UI
-    label_singular: 'Post' # Used in the UI, ie: "New Post"
+  - name: "posts" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Posts" # Used in the UI
+    label_singular: "Post" # Used in the UI, ie: "New Post"
     description: >
       Create awesome content here.
-    folder: 'src/content/posts'
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-    summary: '{{title}} — {{year}}/{{month}}/{{day}}'
+    folder: "src/content/posts"
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    summary: "{{title}} — {{year}}/{{month}}/{{day}}"
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - { label: 'Template', name: 'template', widget: 'hidden', default: 'blog-post'}
-      - { label: 'Title', name: 'title', widget: 'string', tagname: 'h1' }
-      - { label: 'Slug', name: 'slug', widget: 'string', hint: 'Start slug with /. Use only alphanumeric characters, - and _. Avoid spaces in any cases.'}
       - {
-          label: 'Publish Date',
-          name: 'date',
-          widget: 'datetime',
-          dateFormat: 'YYYY-MM-DD',
-          timeFormat: 'HH:mm',
-          format: 'YYYY-MM-DD HH:mm',
+          label: "Template",
+          name: "template",
+          widget: "hidden",
+          default: "blog-post",
         }
-      - { label: 'SEO Description', name: 'description', widget: 'text' }
+      - { label: "Title", name: "title", widget: "string", tagname: "h1" }
       - {
-          label: 'Featured Image',
-          name: 'featuredImage',
-          widget: 'image',
+          label: "Slug",
+          name: "slug",
+          widget: "string",
+          hint: "Start slug with /. Use only alphanumeric characters, - and _. Avoid spaces in any cases.",
+        }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          dateFormat: "YYYY-MM-DD",
+          timeFormat: "HH:mm",
+          format: "YYYY-MM-DD HH:mm",
+        }
+      - { label: "SEO Description", name: "description", widget: "text" }
+      - {
+          label: "Featured Image",
+          name: "featuredImage",
+          widget: "image",
           required: false,
-          tagname: ''
+          tagname: "",
         }
 
-      - { label: 'Body', name: 'body', widget: 'markdown', hint: 'Main content goes here.' }
+      - {
+          label: "Body",
+          name: "body",
+          widget: "markdown",
+          hint: "Main content goes here.",
+        }
   - label: "Pages"
     name: "pages"
     files:
@@ -53,38 +68,58 @@ collections:
         name: "home"
         file: "src/content/pages/index.md"
         fields:
-        - {label: "Template", name: "template", widget: "hidden", default: "index-page" }
-        - {label: "Slug", name: "slug", widget: "hidden", default: "/" }
-        - {label: "Title", name: "title", widget: "string"}
-        - {label: "Tagline", name: "tagline", widget: "string"}
-        - {label: "Featured Image", name: "featuredImage", widget: "image"}
-        - {label: "Body", name: "body", widget: "markdown"}
-        - label: "CTA"
-          name: "cta"
-          widget: "object"
-          fields: 
-            - name: "ctaText"
-              label: "CTA text"
-              widget: "string"
-            - name: "ctaLink"
-              label: "CTA Link"
-              widget: "string" 
+          - {
+              label: "Template",
+              name: "template",
+              widget: "hidden",
+              default: "index-page",
+            }
+          - { label: "Slug", name: "slug", widget: "hidden", default: "/" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Tagline", name: "tagline", widget: "string" }
+          - { label: "Featured Image", name: "featuredImage", widget: "image" }
+          - { label: "Body", name: "body", widget: "markdown" }
+          - label: "CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - name: "ctaText"
+                label: "CTA text"
+                widget: "string"
+              - name: "ctaLink"
+                label: "CTA Link"
+                widget: "string"
       - label: "About"
         name: "about"
         file: "src/content/pages/about.md"
         fields:
-        - {label: "Template", name: "template", widget: "hidden", default: "about-page" }
-        - {label: "Slug", name: "slug", widget: "hidden", default: "/about" }
-        - {label: "Title", name: "title", widget: "string"}
-        - {label: "Body", name: "body", widget: "markdown"}
+          - {
+              label: "Template",
+              name: "template",
+              widget: "hidden",
+              default: "about-page",
+            }
+          - { label: "Slug", name: "slug", widget: "hidden", default: "/about" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
       - label: "Contact"
         name: "contact"
         file: "src/content/pages/contact.md"
         fields:
-        - {label: "Template", name: "template", widget: "hidden", default: "contact-page" }
-        - {label: "Slug", name: "slug", widget: "hidden", default: "/contact" }
-        - {label: "Title", name: "title", widget: "string"}
-        - {label: "Body", name: "body", widget: "markdown"}
+          - {
+              label: "Template",
+              name: "template",
+              widget: "hidden",
+              default: "contact-page",
+            }
+          - {
+              label: "Slug",
+              name: "slug",
+              widget: "hidden",
+              default: "/contact",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Body", name: "body", widget: "markdown" }
   - name: settings
     label: Settings
     files:
@@ -112,12 +147,12 @@ collections:
               - widget: text
                 name: description
                 label: Description
-                default: ''
+                default: ""
                 required: false
               - widget: image
                 name: image
                 label: image
-                default: '/assets/stackrole.png'
+                default: "/assets/stackrole.png"
               - widget: image
                 name: iconimage
                 label: favicon
@@ -125,31 +160,49 @@ collections:
                 name: twitterUsername
                 label: Twitter
                 required: false
-                
+
           - label: "Google Analytics"
             name: ga
             widget: string
             hint: "Add you tracking ID, for example UA-XXXXXXXXX-X"
       - label: Social Icons
-        name: socialIcons     
+        name: socialIcons
         file: "src/util/socialmedia.json"
         fields:
           - label: Social Icons
-            name: socialIcons  
+            name: socialIcons
             widget: list
             collapsed: true
-            hint: "Here you can add social icons, Click on 'Add social icons'"  
+            hint: "Here you can add social icons, Click on 'Add social icons'"
             fields:
               - label: "Icons"
                 name: "icon"
                 widget: "select"
-                options: ["facebook", "twitter", "linkedin", "youtube", "instagram", "rss", "github", "telegram", "pinterest", "snapchat", "skype", "wordpress", "dribbble", "medium", "behance", "vk"]
-                hint: "Select the Icon"   
+                options:
+                  [
+                    "facebook",
+                    "twitter",
+                    "linkedin",
+                    "youtube",
+                    "instagram",
+                    "rss",
+                    "github",
+                    "telegram",
+                    "pinterest",
+                    "snapchat",
+                    "skype",
+                    "wordpress",
+                    "dribbble",
+                    "medium",
+                    "behance",
+                    "vk",
+                  ]
+                hint: "Select the Icon"
               - widget: string
                 name: url
                 label: url
                 required: true
-                hint: "Paste the 'URL' of your Social media" 
+                hint: "Paste the 'URL' of your Social media"
 
   - label: "Appearance"
     name: "appearance"
@@ -159,17 +212,17 @@ collections:
         name: "themescolors"
         file: "src/util/default-colors.json"
         fields:
-        - label: "Primary Color"
-          name: "siteColor"
-          widget: "color"
-          enableAlpha: true
-          allowInput: true
+          - label: "Primary Color"
+            name: "siteColor"
+            widget: "color"
+            enableAlpha: true
+            allowInput: true
       - label: "Dark Theme"
         name: "darkthemescolors"
         file: "src/util/dark-theme-colors.json"
         fields:
-        - label: "Primary Color"
-          name: "siteColor"
-          widget: "color"
-          enableAlpha: true
-          allowInput: true
+          - label: "Primary Color"
+            name: "siteColor"
+            widget: "color"
+            enableAlpha: true
+            allowInput: true

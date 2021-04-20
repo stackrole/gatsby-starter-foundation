@@ -44,9 +44,7 @@ export default class Search extends Component {
               {this.state.results.map(page => (
                 <li key={page.id}>
                   {page.template === "blog-post" ? (
-                    <Link to={page.slug}>
-                      {page.title}
-                    </Link>
+                    <Link to={page.slug}>{page.title}</Link>
                   ) : (
                     ""
                   )}
@@ -88,7 +86,7 @@ const searchStyle = {
       border: "none",
       display: "flex",
       alignItems: "center",
-      color:"#fff",
+      color: "#fff",
       cursor: "pointer",
     },
     position: ["none", "relative"],
@@ -117,10 +115,10 @@ const searchStyle = {
       display: "flex",
       justifyContent: "center",
       "&:hover, &:focus": {
-        color:"rgba(255, 255, 255, 0.8)",
+        color: "rgba(255, 255, 255, 0.8)",
       },
       "&.is-active": {
-        color:"rgba(255, 255, 255, 0.8)",
+        color: "rgba(255, 255, 255, 0.8)",
         position: "relative",
         zIndex: 1112,
         "+ .search-container": {
@@ -151,7 +149,7 @@ const searchStyle = {
             outline: "none",
             fontSize: "16px",
             p: 3,
-            borderBottom: "1px solid #eee"
+            borderBottom: "1px solid #eee",
           },
           ul: {
             display: "block",
@@ -167,9 +165,9 @@ const searchStyle = {
             display: "block",
             color: "var(--theme-ui-colors-muted)",
             p: 3,
-            "&:hover":{
+            "&:hover": {
               color: "var(--theme-ui-colors-text)",
-            }
+            },
           },
         },
       },
