@@ -93,7 +93,7 @@ const searchStyle = {
     ".search-container": {
       display: "none",
       position: "absolute",
-      top: ["110px", "80px"],
+      top: ["85px", "55px", "55px", "60px"],
       borderRadius: "12px",
       width: ["100%", "auto"],
       zIndex: "1111",
