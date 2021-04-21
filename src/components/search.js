@@ -104,7 +104,7 @@ const searchStyle = {
     },
     ".search-input": {
       bg: "#fff",
-      color: "var(--theme-ui-colors-text)",
+      color: "#000",
       borderRadius: "0",
       boxShadow: "none",
       border: "none",
@@ -144,7 +144,7 @@ const searchStyle = {
             },
           },
           input: {
-            width: ["95%", "300px"],
+            width: ["100%", "300px"],
             maxWidth: "100",
             outline: "none",
             fontSize: "16px",
@@ -163,10 +163,10 @@ const searchStyle = {
           },
           "ul > li > a": {
             display: "block",
-            color: "var(--theme-ui-colors-muted)",
+            color: "#000",
             p: 3,
             "&:hover": {
-              color: "var(--theme-ui-colors-text)",
+              color: "#9b9b9b",
             },
           },
         },
