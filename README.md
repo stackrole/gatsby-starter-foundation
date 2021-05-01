@@ -1,3 +1,7 @@
+> **Update** Foundation is now built with Gatsby V3, this include many performance update
+
+---
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/63521b78-612e-4a2f-a409-3fa8009e7f3b/deploy-status)](https://app.netlify.com/sites/frosty-perlman-9da1cb/deploys) &nbsp;<a href="https://twitter.com/intent/follow?screen_name=stackrole">
 <img src="https://img.shields.io/twitter/follow/stackrole.svg?label=Follow%20@Stackrole" alt="Follow @stackrole" />
 </a>
@@ -10,7 +14,7 @@ A starter to launch your blazing fast personal website and a blog, Built with [G
 
 Need help launching your website? My DM's are open on <a href="https://twitter.com/stackrole">twitter</a>
 
-[![Gatsby Starter Foundation Screenshot](static/assets/gatsby-starter-foundation-light-mode.jpg)](https://foundation.stackrole.com)
+[![Gatsby Starter Foundation Screenshot](static/assets/gatsby-starter-foundation-light-mode.jpg)](https://stackrole.com/jamstack/foundation/)
 
 ## 👌 Features
 
@@ -29,7 +33,7 @@ Need help launching your website? My DM's are open on <a href="https://twitter.c
 - Invite collaborators into Netlify CMS, without giving access to your Github account via Git Gateway
 - Gatsby Incremental Builds with Netlify.
 
-[![Gatsby Starter Foundation Screenshot](static/assets/gatsby-starter-foundation-dark-mode.jpg)](https://foundation.stackrole.com)
+[![Gatsby Starter Foundation Screenshot](static/assets/gatsby-starter-foundation-dark-mode.jpg)](https://stackrole.com/demos/foundation)
 
 ## 🚀 Quick Deploy
 
