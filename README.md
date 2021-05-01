@@ -21,6 +21,12 @@ Need help launching your website? My DM's are open on <a href="https://twitter.c
 - A Blog and Personal website with Netlify CMS.
 - Responsive Web Design
 - Dark / Light Mode
+- Customize theme color from CMS
+
+    ![gatsby-starter-foundation-dark-mode.jpg](https://media.giphy.com/media/Pb4yImVfcF6MDYuuGm/giphy.gif)
+
+- Search bar
+- Customize content of Homepage, About and Contact page.
 - Customize content of Homepage, About and Contact page.
 - Add / Modify / Delete blog posts.
 - Edit website settings, Add Google Analytics and make it your own all with in the CMS.
