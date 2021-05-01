@@ -3,13 +3,14 @@ template: about-page
 slug: /about
 title: About Foundation
 ---
+
 Thank you! Now say "nuclear wessels"! No! Don't jump! A sexy mistake. Anyone who laughs is a communist!
 
 A true inspiration for the children. And when we woke up, we had these bodies. Moving along… Do a flip! Michelle, I don't regret this, but I bth rue and lament it.
 
 ![Toys](/assets/vanessa-bucceri-gdirwiyama8-unsplash.jpg "Toys")
 
-Nay, I respect and admire Harold Zoid too much to beat him to death with his own Oscar. Well, then good news! It's a suppository. Then we'll go with that data file! **I've been there.** *My folks were always on me to groom myself and wear underpants.* What am I, the pope?
+Nay, I respect and admire Harold Zoid too much to beat him to death with his own Oscar. Well, then good news! It's a suppository. Then we'll go with that data file! **I've been there.** _My folks were always on me to groom myself and wear underpants._ What am I, the pope?
 
 Daddy Bender, we're hungry. We can't compete with Mom! Her company is big and evil! Ours is small and neutral! We're rescuing ya. We'll go deliver this crate like professionals, and then we'll go home.
 
@@ -23,11 +24,11 @@ Bender, quit destroying the universe! No! The cat shelter's on to me. Enough abo
 
 I decline the title of Iron Cook and accept the lesser title of Zinc Saucier, which I just made up. Uhh… also, comes with double prize money. You mean while I'm sleeping in it? I don't want to be rescued.
 
-* You know the worst thing about being a slave? They make you work, but they don't pay you or let you go.
-* And when we woke up, we had these bodies.
-* Spare me your space age technobabble, Attila the Hun!
+- You know the worst thing about being a slave? They make you work, but they don't pay you or let you go.
+- And when we woke up, we had these bodies.
+- Spare me your space age technobabble, Attila the Hun!
 
-Hi, I'm a naughty nurse, and I really need someone to talk to. $9.95 a minute. But, like most politicians, he promised more than he could deliver. I don't know what you did, Fry, but once again, you screwed up! Now all the planets are gonna start cracking wise about our mamas.
+Hi, I'm a naughty nurse, and I really need someone to talk to. \$9.95 a minute. But, like most politicians, he promised more than he could deliver. I don't know what you did, Fry, but once again, you screwed up! Now all the planets are gonna start cracking wise about our mamas.
 
 You mean while I'm sleeping in it? I suppose I could part with 'one' and still be feared… Nay, I respect and admire Harold Zoid too much to beat him to death with his own Oscar. Negative, bossy meat creature!
 

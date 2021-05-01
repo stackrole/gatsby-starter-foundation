@@ -1,27 +1,29 @@
 *,
 *:after,
 *:before {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 html,
 body {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 body {
-	font-family: var(--font-family);
-	font-size: 18px;
+  font-family: var(--font-family);
+  font-size: 18px;
 }
 code {
-	font-family: var(--font-family-mono);
-} 
+  font-family: var(--font-family-mono);
+}
 main {
-	p { line-height: 1.5; }
+  p {
+    line-height: 1.5;
+  }
 }
 a {
-	color: var(--home-link-color);
-	text-decoration: none;
-	&:hover {
-		color: var(--home-link-hover-color);
-	}
+  color: var(--home-link-color);
+  text-decoration: none;
+  &:hover {
+    color: var(--home-link-hover-color);
+  }
 }

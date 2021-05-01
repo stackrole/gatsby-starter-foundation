@@ -6,9 +6,10 @@ date: 2019-07-10T00:00:00.000Z
 description: sdasd
 featuredImage: /assets/avery-klein-c_drtsnboqa-unsplash.jpg
 ---
+
 Uh, is the puppy mechanical in any way? Maybe I love you so much I love you no matter who you are pretending to be. If rubbin' frozen dirt in your crotch is wrong, hey I don't wanna be right. I found what I need. And it's not friends, it's things.
 
-That's the ONLY thing about being a slave. OK, if everyone's finished being stupid. Bender, we're trying our best. Fry! Stay back! He's too powerful! I just told you! **You've killed me!** *And yet you haven't said what I told you to say!* How can any of us trust you?
+That's the ONLY thing about being a slave. OK, if everyone's finished being stupid. Bender, we're trying our best. Fry! Stay back! He's too powerful! I just told you! **You've killed me!** _And yet you haven't said what I told you to say!_ How can any of us trust you?
 
 ![Royal Mail](/assets/royal-mail-unsplash.jpg "Royal Mail from Unsplash")
 
@@ -26,9 +27,9 @@ No! I want to live! There are still too many things I don't own! It doesn't look
 
 A true inspiration for the children. Anyone who laughs is a communist! Can I use the gun? Oh, how I wish I could believe or understand that! There's only one reasonable course of action now: kill Flexo!
 
-* Fry! Stay back! He's too powerful!
-* Look, last night was a mistake.
-* Please, Don-Bot… look into your hard drive, and open your mercy file!
+- Fry! Stay back! He's too powerful!
+- Look, last night was a mistake.
+- Please, Don-Bot… look into your hard drive, and open your mercy file!
 
 And I'm his friend Jesus. One hundred dollars. There, now he's trapped in a book I wrote: a crummy world of plot holes and spelling errors! No! The cat shelter's on to me.
 
