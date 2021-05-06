@@ -95,7 +95,7 @@ const Post = ({ data, pageContext }) => {
         <header className="featured-banner">
           <section className="article-header">
             <h1>{frontmatter.title}</h1>
-            <time>{frontmatter.date}</time>
+            <time sx={{color: "muted"}}>{frontmatter.date}</time>
           </section>
           {Image ? (
             <GatsbyImage
