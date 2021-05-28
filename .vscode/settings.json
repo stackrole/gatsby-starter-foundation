@@ -2,5 +2,6 @@
   "prettier.useTabs": true,
   "editor.tabSize": 2,
   "html.format.wrapLineLength": 80,
-  "editor.wordWrap": "on"
+  "editor.wordWrap": "on",
+  "liveServer.settings.root": "/public"
 }
