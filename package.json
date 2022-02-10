@@ -42,7 +42,7 @@
     "gatsby-transformer-remark": "^3.1.0",
     "gatsby-transformer-sharp": "^3.1.0",
     "netlify-cms-app": "2.14.32",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "prismjs": "^1.23.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
