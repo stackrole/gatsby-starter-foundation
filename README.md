@@ -1,4 +1,4 @@
-> **Update** Foundation is now built with Gatsby V3, this include many performance update
+> **Update** Foundation is now built with Gatsby V4, this include many performance update
 
 ---
 
