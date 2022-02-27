@@ -51,5 +51,7 @@
     "sass": "^1.49.7",
     "theme-ui": "^0.6.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gatsby-plugin-netlify": "^4.1.0"
+  }
 }
