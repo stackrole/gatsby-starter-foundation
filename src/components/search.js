@@ -27,6 +27,7 @@ export default class Search extends Component {
       <div sx={searchStyle.searchField}>
         <div>
           <button
+            aria-label="search"
             onClick={this.handleToggleClick}
             className={this.state.showSearch ? "search is-active" : "search"}
           >
