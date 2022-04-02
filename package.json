@@ -43,7 +43,7 @@
     "gatsby-transformer-sharp": "^4.7.0",
     "netlify-cms-app": "2.14.32",
     "node-sass": "^7.0.1",
-    "prismjs": "^1.26.0",
+    "prismjs": "^1.27.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-helmet": "^6.1.0",
