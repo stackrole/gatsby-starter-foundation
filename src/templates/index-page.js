@@ -19,7 +19,7 @@ import {
   RiMediumFill,
   RiBehanceFill,
 } from "react-icons/ri"
-import { FaWordpress, FaVk } from "react-icons/fa"
+import { FaTiktok, FaWordpress, FaVk } from "react-icons/fa"
 
 import Layout from "../components/layout"
 import BlogListHome from "../components/blog-list-home"
@@ -159,6 +159,13 @@ const HomePage = ({ data }) => {
         {icons.icon === "wordpress" ? (
           <a href={icons.url} target="_blank" aria-label="link to Wordpress">
             <FaWordpress alt="Wordpress icon" />
+          </a>
+        ) : (
+          ""
+        )}
+        {icons.icon === "tiktok" ? (
+          <a href={icons.url} target="_blank" aria-label="link to Wordpress">
+            <FaTiktok alt="tiktok icon" />
           </a>
         ) : (
           ""
