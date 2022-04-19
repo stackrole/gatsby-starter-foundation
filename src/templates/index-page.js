@@ -80,114 +80,114 @@ const HomePage = ({ data }) => {
     return (
       <div key={"social icons" + index}>
         {icons.icon === "facebook" ? (
-          <Link to={icons.url} target="_blank" aria-label="link to Facebook">
+          <a href={icons.url} target="_blank" aria-label="link to Facebook">
             <RiFacebookBoxFill alt="Facebook icon"/>
-          </Link>
+          </a>
         ) : (
           ""
         )}
         {icons.icon === "twitter" ? (
-          <Link to={icons.url} target="_blank" aria-label="link to Twitter">
+          <a href={icons.url} target="_blank" aria-label="link to Twitter">
             <RiTwitterFill alt="Twitter icon"/>
-          </Link>
+          </a>
         ) : (
           ""
         )}
         {icons.icon === "linkedin" ? (
-          <Link to={icons.url} target="_blank" aria-label="link to Linkedin">
+          <a href={icons.url} target="_blank" aria-label="link to Linkedin">
             <RiLinkedinBoxFill alt="Linkedin icon"/>
-          </Link>
+          </a>
         ) : (
           ""
         )}
         {icons.icon === "youtube" ? (
-          <Link to={icons.url} target="_blank" aria-label="link to Youtube">
+          <a href={icons.url} target="_blank" aria-label="link to Youtube">
             <RiYoutubeFill alt="Youtube icon" />
-          </Link>
+          </a>
         ) : (
           ""
         )}
         {icons.icon === "instagram" ? (
-          <Link to={icons.url} target="_blank" aria-label="link to Instagram">
+          <a href={icons.url} target="_blank" aria-label="link to Instagram">
             <RiInstagramFill alt="Instagram icon" />
-          </Link>
+          </a>
         ) : (
           ""
         )}
         {icons.icon === "rss" ? (
-          <Link to={icons.url} target="_blank" aria-label="link to RSS" >
+          <a href={icons.url} target="_blank" aria-label="link to RSS" >
             <RiRssFill alt="RSS icon" />
-          </Link>
+          </a>
         ) : (
           ""
         )}
         {icons.icon === "github" ? (
-          <Link to={icons.url} target="_blank" aria-label="link to Github" >
+          <a href={icons.url} target="_blank" aria-label="link to Github" >
             <RiGithubFill alt="Github icon" />
-          </Link>
+          </a>
         ) : (
           ""
         )}
         {icons.icon === "telegram" ? (
-          <Link to={icons.url} target="_blank" aria-label="link to Telegram" >
+          <a href={icons.url} target="_blank" aria-label="link to Telegram" >
             <RiTelegramFill alt="Telegram icon" />
-          </Link>
+          </a>
         ) : (
           ""
         )}
         {icons.icon === "pinterest" ? (
-          <Link to={icons.url} target="_blank" aria-label="link to Pinterest">
+          <a href={icons.url} target="_blank" aria-label="link to Pinterest">
             <RiPinterestFill alt="Pinterest icon" />
-          </Link>
+          </a>
         ) : (
           ""
         )}
         {icons.icon === "snapchat" ? (
-          <Link to={icons.url} target="_blank" aria-label="link to Snapchat">
+          <a href={icons.url} target="_blank" aria-label="link to Snapchat">
             <RiSnapchatFill alt="Snapchat icon" />
-          </Link>
+          </a>
         ) : (
           ""
         )}
         {icons.icon === "skype" ? (
-          <Link to={icons.url} target="_blank" aria-label="link to Skype">
+          <a href={icons.url} target="_blank" aria-label="link to Skype">
             <RiSkypeFill alt="Skype icon" />
-          </Link>
+          </a>
         ) : (
           ""
         )}
         {icons.icon === "wordpress" ? (
-          <Link to={icons.url} target="_blank" aria-label="link to Wordpress">
+          <a href={icons.url} target="_blank" aria-label="link to Wordpress">
             <FaWordpress alt="Wordpress icon" />
-          </Link>
+          </a>
         ) : (
           ""
         )}
         {icons.icon === "dribbble" ? (
-          <Link to={icons.url} target="_blank" aria-label="link to Dribbble">
+          <a href={icons.url} target="_blank" aria-label="link to Dribbble">
             <RiDribbbleFill alt="Dribbble icon" />
-          </Link>
+          </a>
         ) : (
           ""
         )}
         {icons.icon === "medium" ? (
-          <Link to={icons.url} target="_blank" aria-label="link to Medium">
+          <a href={icons.url} target="_blank" aria-label="link to Medium">
             <RiMediumFill alt="Medium icon" />
-          </Link>
+          </a>
         ) : (
           ""
         )}
         {icons.icon === "behance" ? (
-          <Link to={icons.url} target="_blank" aria-label="link to Behance">
+          <a href={icons.url} target="_blank" aria-label="link to Behance">
             <RiBehanceFill alt="Behance icon" />
-          </Link>
+          </a>
         ) : (
           ""
         )}
         {icons.icon === "vk" ? (
-          <Link to={icons.url} target="_blank" aria-label="link to vk">
+          <a href={icons.url} target="_blank" aria-label="link to vk">
             <FaVk alt="vk icon" />
-          </Link>
+          </a>
         ) : (
           ""
         )}
