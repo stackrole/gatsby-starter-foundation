@@ -9,7 +9,7 @@ backend:
     deleteMedia: "[skip ci] Delete “{{path}}”"
 
 # Uncomment local_backend when you need to develop in your local
-local_backend: true # run npx netlify-cms-proxy-server for local testing
+#local_backend: true # run `npx netlify-cms-proxy-server` for local testing
 
 media_folder: "static/assets"
 public_folder: "/assets"
