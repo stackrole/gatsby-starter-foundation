@@ -1,4 +1,4 @@
-> **Update** Foundation is now built with Gatsby V4, this include many performance update
+> **Update** If you love building with gatsby-starter-foundation, join the discussion about its future updates. We value your input! https://github.com/stackrole/gatsby-starter-foundation/discussions/91
 
 ---
 
