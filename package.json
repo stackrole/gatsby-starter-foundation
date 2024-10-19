@@ -2,6 +2,8 @@
   "name": "@stackrole/gatsby-starter-foundation",
   "description": "A starter to launch your blazing fast personal website and a blog, Built with Gatsby and Netlify CMS. Made with ❤ by Stackrole",
   "version": "2.0.0",
+  "main": "index.js", // Assuming index.js is the main entry point of the application
+  "keywords": ["gatsby", "netlify", "cms", "blog", "website"], // Add relevant keywords
   "author": "Stackrole <stackrole@gmail.com>",
   "license": "MIT",
   "repository": {
@@ -18,7 +20,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "npm run test" // Assuming there are tests to run
   },
   "dependencies": {
     "@gatsby-contrib/gatsby-plugin-elasticlunr-search": "^3.0.2",
@@ -43,8 +45,8 @@
     "gatsby-transformer-sharp": "^4.7.0",
     "netlify-cms-app": "^2.14.32",
     "prismjs": "^1.27.0",
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.10.1",
     "sass": "^1.49.7",
