@@ -1,25 +1,57 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
+/** @jsxImportSource theme-ui */
+"use client"
 import { Component } from "react"
-import { Index } from "elasticlunr"
-import { Link } from "gatsby"
+import elasticlunr from "elasticlunr"
+import Link from "next/link"
 import { RiSearchLine } from "react-icons/ri"
 
 export default class Search extends Component {
   constructor(props) {
     super(props)
-    this.state = { showSearch: false }
-    this.handleToggleClick = this.handleToggleClick.bind(this)
     this.state = {
+      showSearch: false,
       query: ``,
       results: [],
     }
+    this.handleToggleClick = this.handleToggleClick.bind(this)
   }
 
   handleToggleClick() {
-    this.setState(state => ({
+    this.setState((state) => ({
       showSearch: !state.showSearch,
     }))
+  }
+
+  getOrCreateIndex = () => {
+    if (this.index) return this.index
+    // Build index from documents
+    this.index = elasticlunr(function () {
+      this.addField("title")
+      this.addField("template")
+      this.addField("slug")
+      this.setRef("id")
+    })
+    if (this.props.searchData) {
+      this.props.searchData.forEach((doc) => {
+        this.index.addDoc(doc)
+      })
+    }
+    return this.index
+  }
+
+  search = (evt) => {
+    const query = evt.target.value
+    this.index = this.getOrCreateIndex()
+    this.setState({
+      query,
+      results: this.index
+        .search(query, {})
+        .map(({ ref }) => {
+          const doc = this.props.searchData.find((d) => d.id === ref)
+          return doc
+        })
+        .filter(Boolean),
+    })
   }
 
   render() {
@@ -42,10 +74,10 @@ export default class Search extends Component {
               className="search-input"
             />
             <ul sx={searchStyle.searchResults}>
-              {this.state.results.map(page => (
+              {this.state.results.map((page) => (
                 <li key={page.id}>
                   {page.template === "blog-post" ? (
-                    <Link to={page.slug}>{page.title}</Link>
+                    <Link href={page.slug}>{page.title}</Link>
                   ) : (
                     ""
                   )}
@@ -56,20 +88,6 @@ export default class Search extends Component {
         </div>
       </div>
     )
-  }
-
-  getOrCreateIndex = () =>
-    this.index ? this.index : Index.load(this.props.searchIndex)
-
-  search = evt => {
-    const query = evt.target.value
-    this.index = this.getOrCreateIndex()
-    this.setState({
-      query,
-      results: this.index
-        .search(query, {})
-        .map(({ ref }) => this.index.documentStore.getDoc(ref)),
-    })
   }
 }
 

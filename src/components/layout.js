@@ -1,32 +1,18 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
-import { useStaticQuery, graphql } from "gatsby"
+/** @jsxImportSource theme-ui */
+"use client"
 
 import Header from "./header"
 import Logo from "./logo"
 import Navigation from "./navigation"
 
-import "../assets/scss/style.scss"
 import Footer from "./footer"
 import Theme from "../components/theme"
 import Search from "../components/search"
 
-const query = graphql`
-  query LayoutQuery {
-    site {
-      siteMetadata {
-        siteTitle: title
-      }
-    }
-    siteSearchIndex {
-      index
-    }
-  }
-`
+import siteData from "../util/site.json"
 
-const Layout = ({ children, className, props }) => {
-  const { site, siteSearchIndex } = useStaticQuery(query)
-  const { siteTitle } = site.siteMetadata
+const Layout = ({ children, className, searchData }) => {
+  const siteTitle = siteData.meta.title
 
   return (
     <div className="primary-container">
@@ -34,16 +20,16 @@ const Layout = ({ children, className, props }) => {
         <Logo title={siteTitle} />
         <div sx={layoutStyle.nav}>
           <div sx={{ display: ["flex", "flex", "flex", "none"] }}>
-            <Search searchIndex={siteSearchIndex.index} />
+            <Search searchData={searchData} />
           </div>
           <Navigation />
         </div>
         <div sx={layoutStyle.appearance}>
-          <Search searchIndex={siteSearchIndex.index} />
+          <Search searchData={searchData} />
           <Theme />
         </div>
       </Header>
-      <main className={"container " + className}>{children}</main>
+      <main className={"container " + (className || "")}>{children}</main>
       <Footer />
     </div>
   )

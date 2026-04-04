@@ -1,7 +1,6 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
-import { Link } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+/** @jsxImportSource theme-ui */
+"use client"
+import Link from "next/link"
 
 const PostCard = ({ data }) => (
   <article
@@ -11,9 +10,9 @@ const PostCard = ({ data }) => (
     }}
   >
     {data.frontmatter.featuredImage ? (
-      <Link to={data.frontmatter.slug}>
-        <GatsbyImage
-          image={data.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
+      <Link href={data.frontmatter.slug}>
+        <img
+          src={data.frontmatter.featuredImage}
           alt={data.frontmatter.title + " - Featured image"}
           className="featured-image"
         />
@@ -24,7 +23,7 @@ const PostCard = ({ data }) => (
     <div className="post-content">
       <h2 className="title">
         <Link
-          to={data.frontmatter.slug}
+          href={data.frontmatter.slug}
           sx={{
             variant: "links.postLink",
           }}
