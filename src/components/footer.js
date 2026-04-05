@@ -1,6 +1,5 @@
 /** @jsxImportSource theme-ui */
 "use client"
-import Link from "next/link"
 import { RiHeart2Line } from "react-icons/ri"
 
 const Footer = () => (
