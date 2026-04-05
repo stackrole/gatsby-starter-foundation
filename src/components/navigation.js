@@ -1,7 +1,7 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
+/** @jsxImportSource theme-ui */
+"use client"
 import React from "react"
-import { Link } from "gatsby"
+import Link from "next/link"
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri"
 import Theme from "../components/theme"
 
@@ -24,9 +24,9 @@ const MenuItems = [
   },
 ]
 
-const ListLink = props => (
+const ListLink = (props) => (
   <li>
-    <Link to={props.to}>{props.children}</Link>
+    <Link href={props.to}>{props.children}</Link>
   </li>
 )
 
@@ -38,7 +38,7 @@ class Navigation extends React.Component {
   }
 
   handleToggleClick() {
-    this.setState(state => ({
+    this.setState((state) => ({
       showMenu: !state.showMenu,
     }))
   }

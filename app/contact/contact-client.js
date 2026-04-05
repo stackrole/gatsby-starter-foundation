@@ -1,40 +1,33 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
-import { graphql } from "gatsby"
+/** @jsxImportSource theme-ui */
+"use client"
 import { RiSendPlane2Line } from "react-icons/ri"
 
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Layout from "../../src/components/layout"
 
-export const pageQuery = graphql`
-  query ContactQuery($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      id
-      html
-      excerpt(pruneLength: 140)
-      frontmatter {
-        title
-      }
-    }
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`
+const contactStyles = {
+  contactPage: {
+    input: {
+      border: "6px solid",
+      borderColor: "inputBorder",
+      bg: "inputBackground",
+      outline: "none",
+    },
+    textarea: {
+      border: "6px solid",
+      borderColor: "inputBorder",
+      bg: "inputBackground",
+      outline: "none",
+    },
+  },
+}
 
-const Contact = ({ data }) => {
-  const { markdownRemark, site } = data // data.markdownRemark holds your post data
-  const { frontmatter, html } = markdownRemark
+export default function ContactPageClient({ pageData, searchData }) {
+  if (!pageData) return null
+  const { frontmatter, html } = pageData
 
   return (
-    <Layout className="contact-page" sx={contactStyles.contactPage}>
-      <Seo
-        title={frontmatter.title}
-        description={frontmatter.title + " " + site.siteMetadata.title}
-      />
-      <div className="wrapper">
+    <Layout className="contact-page" searchData={searchData}>
+      <div className="wrapper" sx={contactStyles.contactPage}>
         <h1>{frontmatter.title}</h1>
         <div
           className="description"
@@ -90,23 +83,4 @@ const Contact = ({ data }) => {
       </div>
     </Layout>
   )
-}
-
-export default Contact
-
-const contactStyles = {
-  contactPage: {
-    input: {
-      border: "6px solid",
-      borderColor: "inputBorder",
-      bg: "inputBackground",
-      outline: "none",
-    },
-    textarea: {
-      border: "6px solid",
-      borderColor: "inputBorder",
-      bg: "inputBackground",
-      outline: "none",
-    },
-  },
 }

@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
+/** @jsxImportSource theme-ui */
+"use client"
 
 const Header = ({ children }) => (
   <header

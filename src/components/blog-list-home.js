@@ -1,16 +1,15 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
-import { Link } from "gatsby"
+/** @jsxImportSource theme-ui */
+"use client"
+import Link from "next/link"
 import { RiArrowDownLine, RiArrowRightSLine } from "react-icons/ri"
 
 import PostCard from "./post-card"
 
-export default function BlogListHome(props) {
-  const data = props.data
-  const posts = data.edges
-    .filter(edge => !!edge.node.frontmatter.date)
-    .map(edge => <PostCard key={edge.node.id} data={edge.node} />)
-  return <PostMaker data={posts} />
+export default function BlogListHome({ posts }) {
+  const postCards = posts
+    .filter((post) => !!post.frontmatter.date)
+    .map((post) => <PostCard key={post.id} data={post} />)
+  return <PostMaker data={postCards} />
 }
 
 const PostMaker = ({ data }) => (
@@ -24,7 +23,7 @@ const PostMaker = ({ data }) => (
     <div className="grids col-1 sm-2 lg-3">{data}</div>
     <Link
       className="button"
-      to="/blog"
+      href="/blog"
       sx={{
         variant: "variants.button",
       }}

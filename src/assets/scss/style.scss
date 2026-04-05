@@ -121,6 +121,9 @@
   }
   .featured-image {
     border-radius: 12px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
   @media (max-width: $breakpoint-sm) {
     padding: 30px 0;
@@ -156,6 +159,11 @@
   transition: box-shadow 0.3s linear;
   .featured-image {
     border-radius: 12px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: 0;
     img {
       display: block;
       margin: 0;
@@ -236,6 +244,7 @@ article iframe {
 }
 article img {
   max-width: 100%;
+  height: auto;
 }
 .blog-post-content {
   max-width: 70ch;
@@ -249,6 +258,8 @@ article img {
   .featured-image {
     border-radius: 12px;
     display: block;
+    width: 100%;
+    height: auto;
     margin-left: auto;
     margin-right: auto;
   }

@@ -1,5 +1,5 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
+/** @jsxImportSource theme-ui */
+"use client"
 import { useColorMode } from "theme-ui"
 import { FiMoon, FiSun } from "react-icons/fi"
 
@@ -8,7 +8,7 @@ const Theme = () => {
   return (
     <div sx={themeStyles.modeOption}>
       <button
-        onClick={e => {
+        onClick={(e) => {
           setColorMode(colorMode === "default" ? "dark" : "default")
         }}
       >

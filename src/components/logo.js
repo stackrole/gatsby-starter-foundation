@@ -1,9 +1,9 @@
-import React from "react"
-import { Link } from "gatsby"
+"use client"
+import Link from "next/link"
 
-const Logo = props => (
+const Logo = (props) => (
   <div className="site-logo">
-    <Link to="/">{props.title}</Link>
+    <Link href="/">{props.title}</Link>
   </div>
 )
 
