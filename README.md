@@ -14,7 +14,7 @@ A starter to launch your blazing fast personal website and a blog, Built with [G
 
 Need help launching your website? My DM's are open on <a href="https://twitter.com/stackrole">twitter</a>
 
-[![Gatsby Starter Foundation Screenshot](static/assets/gatsby-starter-foundation-light-mode.jpg)](https://foundation.stackrole.com)
+![Gatsby Starter Foundation Screenshot](static/assets/gatsby-starter-foundation-light-mode.jpg)
 
 ## 👌 Features
 
@@ -39,7 +39,7 @@ Need help launching your website? My DM's are open on <a href="https://twitter.c
 - Invite collaborators into Netlify CMS, without giving access to your Github account via Git Gateway
 - Gatsby Incremental Builds with Netlify.
 
-[![Gatsby Starter Foundation Screenshot](static/assets/gatsby-starter-foundation-dark-mode.jpg)](https://foundation.stackrole.com)
+![Gatsby Starter Foundation Screenshot](static/assets/gatsby-starter-foundation-dark-mode.jpg)
 
 ## 🚀 Quick Deploy
 
@@ -167,10 +167,6 @@ I would love to get your feedback and contributions.
 
 Feel free to ping [@stackrole](stackrole) for help regarding your JAMstack website, our DM's are open. And do not forget to share you website with me 😊
 
-[![Check out Stackrole.com - A Jamstack marketplace](static/assets/twitter-header.jpg)](https://stackrole.com)
-
 [gatsby]: https://gatsbyjs.org
 [netlifycms]: https://www.netlifycms.org
-[stackrole]: https://stackrole.com
 [twitter]: https://twitter.com/stackrole
-[custom-domain]: https://stackrole.com/adding-custom-domain-netlify
