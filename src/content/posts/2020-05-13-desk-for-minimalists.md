@@ -17,7 +17,6 @@ That's the ONLY thing about being a slave. OK, if everyone's finished being stup
 
 No! I want to live! There are still too many things I don't own! It doesn't look so shiny to me. I'm just glad my fat, ugly mama isn't alive to see this day. Soon enough. I'm sure those windmills will keep them cool.
 
-![]()
 
 1. Guards! Bring me the forms I need to fill out to have her taken away!
 2. Have you ever tried just turning off the TV, sitting down with your children, and hitting them?

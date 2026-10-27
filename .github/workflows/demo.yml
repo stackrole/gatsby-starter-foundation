@@ -1,0 +1,23 @@
+name: Demo
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  demo:
+    uses: mobifreaks/.github/.github/workflows/deploy-demo.yml@v1
+    with:
+      kind: node
+      node-version: "22"
+      output: out

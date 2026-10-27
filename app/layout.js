@@ -15,7 +15,7 @@ export const metadata = {
     description: siteData.meta.description,
     url: siteData.meta.siteUrl,
     siteName: siteData.meta.title,
-    images: [siteData.meta.image],
+    images: [`${process.env.BASE_PATH || ""}${siteData.meta.image}`],
     type: "website",
   },
   twitter: {

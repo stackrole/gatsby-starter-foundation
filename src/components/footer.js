@@ -15,7 +15,7 @@ const Footer = () => (
         <span className="icon -love">
           <RiHeart2Line />
         </span>{" "}
-        by <a href="https://dsnengr.com" target="_blank" rel="noopener noreferrer">dsnengr.com</a>
+        by <a href="https://munawarahmed.com/posts/welcome-to-stackrole/">Stackrole</a>
       </p>
     </div>
   </footer>

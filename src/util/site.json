@@ -2,8 +2,8 @@
   "meta": {
     "title": "Foundation",
     "titleTemplate": "%s",
-    "description": "A starter to launch your blazing fast personal website and a blog, Built with Gatsby and Netlify CMS. Made with ❤ by Stackrole",
-    "siteUrl": "https://foundation.stackrole.com",
+    "description": "A starter to launch your blazing fast personal website and a blog, Built with Next.js. Made with ❤ by Stackrole",
+    "siteUrl": "https://stackrole.github.io/gatsby-starter-foundation",
     "image": "/assets/stackrole.png",
     "iconimage": "/assets/stackrole.png",
     "twitterUsername": "@stackrole"
